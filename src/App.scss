@@ -1,0 +1,19 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+// body {
+//   margin: 0 10% 0 10%;
+// }
+:root {
+  --primario: #64d0c3;
+  --secundario: #0d0d0d;
+  --terciario: #ebebeb;
+  --cuarto: #da2f2f;
+}
+// $color-primario: #64d0c3;
+//   $color-secundario: #6b6;
+//   $color-texto: #666;
+$primary: #64d0c3;
+@import "bootstrap";

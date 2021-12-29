@@ -1,0 +1,25 @@
+.infofecha {
+  &__container {
+    h4::before {
+      content: "⌟";
+      font-weight: bold;
+      color: var(--cuarto);
+    }
+    background: #ffffff1a;
+    box-shadow: 0 8px 32px 0 rgba(100, 208, 195, 0.37);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    padding: 5%;
+    span {
+      font-weight: bold;
+    }
+    b {
+      color: var(--primario);
+    }
+  }
+  &__button {
+    margin-top: 3%;
+  }
+}

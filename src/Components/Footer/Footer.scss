@@ -1,0 +1,20 @@
+.footer {
+  &__container {
+    background-color: var(--secundario);
+    color: white;
+    width: 100%;
+    text-align: center;
+    padding: 1%;
+  }
+  &__coldown {
+    align-items: center;
+    i {
+      font-size: 2em;
+      padding: 2%;
+      cursor: pointer;
+    }
+  }
+  &__colup {
+    padding: 1%;
+  }
+}

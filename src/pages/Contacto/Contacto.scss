@@ -1,0 +1,15 @@
+.contacto {
+  &__container {
+    margin-top: 2.5%;
+    margin-bottom: 10%;
+    border-top: solid 1px black;
+    padding-top: 2.5%;
+  }
+  &__form {
+    margin-right: 10%;
+  }
+  &__titulo {
+    text-align: center;
+    margin-top: 2%;
+  }
+}

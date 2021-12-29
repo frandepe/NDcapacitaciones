@@ -1,0 +1,56 @@
+.programas {
+  &__conth2 {
+    width: 100%;
+    background: url(imgCurso2.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    padding: 5%;
+    h2 {
+      color: white;
+      text-shadow: 3px 3px 2px rgba(0, 0, 0, 0.6);
+      text-align: center;
+    }
+  }
+  &__divp {
+    margin-top: 2%;
+    margin-bottom: 2%;
+    p {
+      text-align: center;
+    }
+  }
+  &__info {
+    // margin-left: 20%;
+    // margin-right: 20%;
+    font-weight: bold;
+    color: var(--primario);
+    padding-top: 2%;
+    i {
+      color: var(--cuarto);
+    }
+  }
+  &__contenedorInfo {
+    border-top: solid 1px black;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+  }
+  &__info {
+    &--flex {
+      display: flex;
+      justify-content: space-around;
+      text-align: center;
+      align-items: center;
+    }
+    &--column {
+      display: flex;
+      flex-direction: column;
+      margin: 20%;
+      img {
+        width: 100px;
+        height: auto;
+      }
+    }
+  }
+}
