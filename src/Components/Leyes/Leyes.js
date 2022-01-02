@@ -24,7 +24,7 @@ const Leyes = () => {
               salud.
             </p>
           </Col>
-          <Col className="leyes__right">
+          <Col className="leyes__right" sm>
             <iframe
               width="560"
               height="315"

@@ -38,3 +38,9 @@
     margin-top: 3%;
   }
 }
+
+@media (max-width: 600px) {
+  .infofecha__container {
+    width: 100vw;
+  }
+}

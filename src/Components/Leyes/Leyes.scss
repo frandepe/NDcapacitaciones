@@ -20,3 +20,13 @@
 .leyesb {
   margin-top: 2%;
 }
+
+@media (max-width: 400px) {
+  .leyes {
+    &__right {
+      iframe {
+        width: 90vw;
+      }
+    }
+  }
+}

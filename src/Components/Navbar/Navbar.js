@@ -1,21 +1,12 @@
 import logo from "./Logo.png";
 import "./Navbar.scss";
-import {
-  Navbar,
-  Container,
-  NavDropdown,
-  Nav,
-  FormControl,
-  Form,
-  Button,
-  Image,
-} from "react-bootstrap";
+import { Navbar, Container, NavDropdown, Nav } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.css";
 
 const Navbar3 = () => {
   return (
     <div className="pepe">
-      <Navbar bg="light" expand="lg">
+      <Navbar bg="light" expand="lg" sticky="top">
         <Container fluid>
           <Navbar.Brand href="#home">
             <img
@@ -26,11 +17,11 @@ const Navbar3 = () => {
               alt={"logo"}
             />
           </Navbar.Brand>
-          {/* <Navbar.Toggle aria-controls="navbarScroll" /> */}
-          <Navbar.Collapse id="navbarScroll" className="d-flex">
+          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+          <Navbar.Collapse>
             <Nav
               className="me-auto my-2 my-lg-0 me-2 Navbar3__nav"
-              style={{ maxHeight: "100px" }}
+              style={{ maxHeight: "500px" }}
               navbarScroll
             >
               <Nav.Link className="Navbar3__losli" href="home">

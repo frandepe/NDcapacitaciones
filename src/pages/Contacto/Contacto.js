@@ -140,7 +140,7 @@ const Contacto = () => {
               </b>
             </div>
           </Col>
-          <Col className="contacto__info">
+          <Col sm={4} className="contacto__info">
             <div className="contacto__trenque">
               <b>Trenque Lauquen</b>
             </div>

@@ -10,7 +10,7 @@ const NecesidadDeCapacitar = () => {
     <div className="divContainer">
       <Container>
         <Row className="NecesidadDeCapacitar__container">
-          <Col className="colimg">
+          <Col sm={4} className="colimg">
             <img src={img2} width="540" height="350" alt={"Capatitacion RCP"} />
           </Col>
           <Col>
