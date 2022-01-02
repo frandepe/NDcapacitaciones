@@ -27,19 +27,27 @@ const Cards = () => {
               Especialmente recomendados para profesionales que desarrollan
               actividades
             </Card.Text>
-            <Button variant="primary">Saber más</Button>
+            <div className="cards__btn">
+              <Button href="contacto" variant="primary">
+                Más información
+              </Button>
+            </div>
           </Card.Body>
         </Card>
 
         <Card className="cards__card">
-          <Card.Img variant="top" src={imgCard2} />
+          <Card.Img variant="top" style={{ height: "320px" }} src={imgCard2} />
           <Card.Body>
             <Card.Title>Formador de Brigadistas de Emergencias</Card.Title>
             <Card.Text>
               Some quick example text to build on the card title and make up the
               bulk of the card's content.
             </Card.Text>
-            <Button variant="primary">Saber más</Button>
+            <div className="cards__btn">
+              <Button href="contacto" variant="primary">
+                Más información
+              </Button>
+            </div>
           </Card.Body>
         </Card>
       </CardGroup>
@@ -53,7 +61,11 @@ const Cards = () => {
               Some quick example text to build on the card title and make up the
               bulk of the card's content.
             </Card.Text>
-            <Button variant="primary">Saber más</Button>
+            <div className="cards__btn">
+              <Button href="contacto" variant="primary">
+                Más información
+              </Button>
+            </div>
           </Card.Body>
         </Card>
 
@@ -73,7 +85,11 @@ const Cards = () => {
               veterinario o arribe al hospital veterinario. No se necesitan
               conocimientos previos.
             </Card.Text>
-            <Button variant="primary">Saber más</Button>
+            <div className="cards__btn">
+              <Button href="contacto" variant="primary">
+                Más información
+              </Button>
+            </div>
           </Card.Body>
         </Card>
       </CardGroup>

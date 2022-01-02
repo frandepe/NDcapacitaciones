@@ -14,13 +14,13 @@ import "bootstrap/dist/css/bootstrap.css";
 
 const Navbar3 = () => {
   return (
-    <div>
+    <div className="pepe">
       <Navbar bg="light" expand="lg">
         <Container fluid>
           <Navbar.Brand href="#home">
             <img
               src={logo}
-              width="400"
+              width="340"
               height="auto"
               className="d-inline-block align-top"
               alt={"logo"}
@@ -49,23 +49,27 @@ const Navbar3 = () => {
                   Próximas Fechas
                 </NavDropdown.Item>
                 <NavDropdown.Divider />
-                <NavDropdown.Item href="#action5">
-                  Otro link más
+                <NavDropdown.Item href="info-nd-capacitaciones">
+                  ND Capacitaciones Info
                 </NavDropdown.Item>
               </NavDropdown>
               <Nav.Link className="Navbar3__losli" href="contacto">
                 Contacto
               </Nav.Link>
             </Nav>
-            <Form className="d-flex">
-              <FormControl
-                type="search"
-                placeholder="Search"
-                className="me-2"
-                aria-label="Search"
-              />
-              <Button variant="primary">Search</Button>
-            </Form>
+            <div className="Navbar3__contenedor-tel">
+              <div>
+                <b>Telefonos útiles:</b>
+              </div>
+              <div className="Navbar3__telefonos">
+                <p>
+                  <span>SAME</span> 107
+                </p>
+                <p>
+                  <span>Policía</span> 911
+                </p>
+              </div>
+            </div>
           </Navbar.Collapse>
         </Container>
       </Navbar>

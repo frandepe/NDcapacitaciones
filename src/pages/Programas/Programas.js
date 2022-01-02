@@ -20,40 +20,61 @@ const Programas = () => {
         </h2>
       </div>
       <Cards />
+
+      {/* <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/_n-mMhTDAUE"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      /> */}
+      {/* <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/xIejawqKj1o"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe> */}
+
       <div className="programas__contenedorInfo">
         <div className="programas__info">
+          <h3>Contenido</h3>
           <p>
-            <i class="fas fa-heartbeat"></i> Diagrama de primeros auxilios
+            <i className="fas fa-heartbeat"></i> Diagrama de primeros auxilios
           </p>
           <p>
-            <i class="fas fa-heartbeat"></i> Estado de conciencia
+            <i className="fas fa-heartbeat"></i> Estado de conciencia
           </p>
           <p>
-            <i class="fas fa-heartbeat"></i> Lipotomia o desmayo
+            <i className="fas fa-heartbeat"></i> Lipotomia o desmayo
           </p>
           <p>
-            <i class="fas fa-heartbeat"></i> Convulsiones
+            <i className="fas fa-heartbeat"></i> Convulsiones
           </p>
           <p>
-            <i class="fas fa-heartbeat"></i> Heridas / Hemorragias
+            <i className="fas fa-heartbeat"></i> Heridas / Hemorragias
           </p>
           <p>
-            <i class="fas fa-heartbeat"></i> Quemaduras
+            <i className="fas fa-heartbeat"></i> Quemaduras
           </p>
           <p>
-            <i class="fas fa-heartbeat"></i> Esguinces / Luxaciones
+            <i className="fas fa-heartbeat"></i> Esguinces / Luxaciones
           </p>
           <p>
-            <i class="fas fa-heartbeat"></i> Fracturas
+            <i className="fas fa-heartbeat"></i> Fracturas
           </p>
           <p>
-            <i class="fas fa-heartbeat"></i> Obstrucción de vias aéreas
+            <i className="fas fa-heartbeat"></i> Obstrucción de vias aéreas
           </p>
           <p>
-            <i class="fas fa-heartbeat"></i> Reanimación cardio pulmonar
+            <i className="fas fa-heartbeat"></i> Reanimación cardio pulmonar
           </p>
           <p>
-            <i class="fas fa-heartbeat"></i> Uso del D.E.A
+            <i className="fas fa-heartbeat"></i> Uso del D.E.A
           </p>
         </div>
         <div className="programas__info--flex">

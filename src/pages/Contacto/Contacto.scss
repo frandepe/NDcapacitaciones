@@ -12,4 +12,22 @@
     text-align: center;
     margin-top: 2%;
   }
+  &__trenque {
+    margin-bottom: 5%;
+  }
+  &__btn {
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
+  &__b {
+    b {
+      color: var(--secundario2);
+    }
+  }
+  &__img {
+    img {
+      width: 240px;
+      height: auto;
+    }
+  }
 }

@@ -24,21 +24,34 @@ const Leyes = () => {
               salud.
             </p>
           </Col>
-          <Col className="leyes__rigth">
-            <b>
-              La ley 27159 Sancionada el 01/07/2015 denominada “LEY DE LA MUERTE
-              SÚBITA - SISTEMA DE PREVENCIÓN INTEGRAL” en su Art. 1° dice: “El
-              objeto de la presente Ley es regular un sistema de prevención
-              integral de eventos por muerte súbita en espacios públicos y
-              privados de acceso publico, a fin de reducir la morbimortalidad
-              súbita de origen cardiovascular”.
-            </b>
-            <b>
-              En su Art. 11°: responsabilidad. Ninguna persona interviniente que
-              haya obrado de acuerdo con las disposiciones de la presente ley,
-              esta sujeta a responsabilidad civil, penal, ni administrativa,
-              derivados del cumplimiento de la misma.
-            </b>
+          <Col className="leyes__right">
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/fcSW1beK-sc"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </Col>
+        </Row>
+        <Row>
+          <Col>
+            <div className="leyesb">
+              <b>
+                La ley 27159 Sancionada el 01/07/2015 denominada “LEY DE LA
+                MUERTE SÚBITA - SISTEMA DE PREVENCIÓN INTEGRAL” en su Art. 1°
+                dice: “El objeto de la presente Ley es regular un sistema de
+                prevención integral de eventos por muerte súbita en espacios
+                públicos y privados de acceso publico, a fin de reducir la
+                morbimortalidad súbita de origen cardiovascular”. En su Art.
+                11°: responsabilidad. Ninguna persona interviniente que haya
+                obrado de acuerdo con las disposiciones de la presente ley, esta
+                sujeta a responsabilidad civil, penal, ni administrativa,
+                derivados del cumplimiento de la misma.
+              </b>
+            </div>
           </Col>
         </Row>
       </Container>

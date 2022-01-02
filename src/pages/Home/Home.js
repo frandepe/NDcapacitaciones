@@ -1,9 +1,10 @@
 import React from "react";
 import Slider from "../../Components/Slider/Slider";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col, Stack } from "react-bootstrap";
 import "./Home.scss";
 import Leyes from "../../Components/Leyes/Leyes";
 import Confian from "../../Components/Confian/Confian";
+import NecesidadDeCapacitar from "../../Components/NecesidadDeCapacitar/NecesidadDeCapacitar";
 
 const Home = () => {
   return (
@@ -23,10 +24,10 @@ const Home = () => {
             Soy instructor dedicado a la capacitación y entrenamiento en
             emergencias, asociado a ACES (Asociación para la Capacitación en
             Emergencias y Socorros) certificado y avalado internacionalmente por
-            AIDER.ORG y diferentes instituciones internacionales como el
-            American College of Emergency, el Emergency Care and Safety
-            Institute ambas de EEUU , la Organización Panamericana de la Salud,
-            etc.
+            AIDER.ORG y diferentes instituciones internacionales como el Colegio
+            americano de emergencias, el Instituto de atención y seguridad de
+            emergencias (ambas de EEUU), y la Organización Panamericana de la
+            Salud.
           </Col>
           <Col className="home__instrucciones" sm={4}>
             <h3>Instructor de: </h3>
@@ -38,6 +39,19 @@ const Home = () => {
         </Row>
       </Container>
       <Leyes />
+      <NecesidadDeCapacitar />
+      <div>
+        <Stack
+          href="fechas"
+          gap={2}
+          className="col-md-2 mx-auto home__inscripciones"
+        >
+          <a href="fechas">
+            <h4>Inscripciones abiertas</h4>
+            <p>Reservá tu lugar. ¡Cupos limitados!</p>
+          </a>
+        </Stack>
+      </div>
       <Confian />
     </div>
   );

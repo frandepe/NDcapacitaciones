@@ -6,6 +6,25 @@
   &__sobremi {
     font-size: 1.5em;
   }
-
-  //   color: var(--primario);
+  &__inscripciones {
+    background-color: var(--cuarto);
+    text-align: center;
+    padding-top: 1%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    cursor: pointer;
+    transition: 0.5s;
+    a {
+      color: white;
+      text-decoration: none;
+    }
+    a:hover {
+      color: white;
+      text-decoration: none;
+    }
+  }
+  &__inscripciones:hover {
+    background-color: var(--primario);
+    transition: 0.5s;
+  }
 }

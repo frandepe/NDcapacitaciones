@@ -1,0 +1,15 @@
+.NDimagenes {
+  &__container {
+    p {
+      color: white;
+    }
+  }
+  &__img {
+    padding-top: 4%;
+    padding-bottom: 4%;
+    img {
+      width: 300px;
+      height: 250px;
+    }
+  }
+}

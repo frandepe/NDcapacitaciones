@@ -9,11 +9,14 @@
 :root {
   --primario: #64d0c3;
   --secundario: #0d0d0d;
-  --terciario: #ebebeb;
+  --secundario2: #808080;
+  --terciario: #dac92f;
   --cuarto: #da2f2f;
 }
 // $color-primario: #64d0c3;
 //   $color-secundario: #6b6;
 //   $color-texto: #666;
 $primary: #64d0c3;
+$secondary: #da2f2f;
+$terciary: #dac92f;
 @import "bootstrap";

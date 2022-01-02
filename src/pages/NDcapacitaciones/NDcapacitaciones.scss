@@ -1,0 +1,24 @@
+.NDcapacitaciones {
+  &__banner {
+    position: relative;
+    z-index: 1;
+    padding-left: 10%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+  }
+  &__banner::before {
+    background: url(imgDeCard.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.4;
+    z-index: -1;
+  }
+}

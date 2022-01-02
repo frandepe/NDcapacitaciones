@@ -1,39 +1,84 @@
-import { Container, Row, Col, Form, FloatingLabel } from "react-bootstrap";
+import {
+  Container,
+  Row,
+  Col,
+  Form,
+  FloatingLabel,
+  Button,
+  Alert,
+} from "react-bootstrap";
+import emailjs from "emailjs-com";
 import "./Contacto.scss";
+import { useState } from "react";
+import img from "./comunicar.png";
 
 const Contacto = () => {
+  const [resultado, setResultado] = useState("");
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "NDcapacitaciones",
+        "template_l95zlcb",
+        e.target,
+        "user_hMTTtuym8LmPBuh0B4Z05"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          setResultado(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+    e.target.reset();
+  };
+
   return (
     <div>
       <div className="contacto__titulo">
         <h3>Contactanos</h3>
-        <p>Escribí para una información personalizada sobre nuestros cursos</p>
+        <p>
+          Escribinos para poder brindarte una información personalizada sobre
+          nuestras capacitaciones
+        </p>
         <p>También estamos abiertos a cualquier tipo de sugerencia!</p>
       </div>
 
       <Container className="contacto__container">
         <Row>
           <Col>
-            <Form className="contacto__form">
-              <FloatingLabel
-                controlId="floatingInput"
-                label="Nombre"
-                className="mb-3"
-              >
-                <Form.Control type="text" placeholder="name@example.com" />
+            <Form onSubmit={sendEmail} className="contacto__form">
+              <FloatingLabel label="Nombre*" className="mb-3">
+                <Form.Control
+                  required
+                  name="nombre"
+                  type="text"
+                  placeholder="name@example.com"
+                />
               </FloatingLabel>
               <FloatingLabel
-                controlId="floatingInput"
-                label="Apellido"
+                required
+                // controlId="floatingInput"
+                label="Apellido*"
                 className="mb-3"
               >
-                <Form.Control type="text" placeholder="name@example.com" />
+                <Form.Control
+                  type="text"
+                  placeholder="name@example.com"
+                  name="apellido"
+                />
               </FloatingLabel>
-              <FloatingLabel
-                controlId="floatingInput"
-                label="Email"
-                className="mb-3"
-              >
-                <Form.Control type="email" placeholder="name@example.com" />
+              <FloatingLabel label="Email*" className="mb-3">
+                <Form.Control
+                  required
+                  type="email"
+                  placeholder="name@example.com"
+                  name="email"
+                />
                 <Col xs="auto" className="my-3">
                   <Form.Label
                     className="me-sm-2"
@@ -42,44 +87,76 @@ const Contacto = () => {
                   >
                     Preference
                   </Form.Label>
-                  <Form.Select className="me-sm-2" id="inlineFormCustomSelect">
-                    <option value="0">Tipo</option>
-                    <option value="1">Persona</option>
-                    <option value="2">Empresa</option>
+                  <Form.Select
+                    className="me-sm-2"
+                    id="inlineFormCustomSelect"
+                    name="tipo"
+                  >
+                    <option value="Tipo">Tipo</option>
+                    <option value="Persona">Persona</option>
+                    <option value="Empresa">Empresa</option>
                   </Form.Select>
                 </Col>
               </FloatingLabel>
 
-              <FloatingLabel
-                controlId="floatingTextarea"
-                label="Asunto"
-                className="mb-3"
-              >
+              <FloatingLabel label="Asunto*" className="mb-3">
                 <Form.Control
+                  required
+                  name="asunto"
                   as="textarea"
                   placeholder="Leave a comment here"
                 />
               </FloatingLabel>
-              <FloatingLabel controlId="floatingTextarea2" label="Comentarios">
+              <FloatingLabel controlId="floatingTextarea2" label="Mensaje*">
                 <Form.Control
+                  required
+                  name="mensaje"
                   as="textarea"
                   placeholder="Leave a comment here"
                   style={{ height: "100px" }}
                 />
               </FloatingLabel>
+              <Button className="contacto__btn" type="submit">
+                Enviar
+              </Button>
             </Form>
+            <div className="contacto__b">
+              <b>
+                {resultado && (
+                  <Alert variant="primary">
+                    <Alert.Heading>Hola!</Alert.Heading>
+                    <p>
+                      Gracias por contactarse, en breve nos pondremos en
+                      contacto con ustéd. Recuerda que puedes enviarnos un
+                      mensaje directo a nuestro WhatsApp.
+                    </p>
+                    <hr />
+                    <p className="mb-0">
+                      Debajo encontrarás nuestras redes sociales para mantenerte
+                      al día sobre las capacitaciones.
+                    </p>
+                  </Alert>
+                )}
+              </b>
+            </div>
           </Col>
           <Col className="contacto__info">
-            <b>Trenque Lauquen</b>
+            <div className="contacto__trenque">
+              <b>Trenque Lauquen</b>
+            </div>
+
             <p>
-              <i class="fas fa-map-marker-alt"></i> Av. Corrientes 9999, Prov.
-              Bs As
+              <i className="fas fa-map-marker-alt"></i> Av. Corrientes 9999,
+              Prov. Bs As
             </p>
             <p>Código postal C1231</p>
             <p>
-              <i class="fas fa-phone"></i> Tel.: (2392) 0000-0000
+              <i className="fas fa-phone"></i> Tel.: (2392) 0000-0000
             </p>
             <p>email@email.com.ar</p>
+            <div className="contacto__img">
+              <img src={img} alt="comunicate" />
+            </div>
           </Col>
         </Row>
       </Container>

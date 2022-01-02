@@ -1,0 +1,32 @@
+.NecesidadDeCapacitar {
+  &__container {
+    background: var(--primario);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+
+    border-radius: 0px 54px 0px 0px;
+    -webkit-border-radius: 0px 54px 0px 0px;
+    -moz-border-radius: 0px 54px 0px 0px;
+  }
+  &__container2 {
+    color: white;
+    background: var(--cuarto);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  }
+  &__container3 {
+    background: rgb(218, 201, 47);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    border-radius: 0px 0px 54px 0px;
+    -webkit-border-radius: 0px 0px 54px 0px;
+    -moz-border-radius: 0px 0px 54px 0px;
+    margin-bottom: 3%;
+  }
+}
+.colimg {
+  padding: 0 !important;
+}
+
+.divContainer {
+  h3 {
+    margin-top: 10%;
+  }
+}

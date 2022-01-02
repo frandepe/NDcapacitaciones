@@ -5,6 +5,7 @@ import Contacto from "../pages/Contacto/Contacto";
 import FAQ from "../pages/FAQ/FAQ";
 import Fechas from "../pages/Fechas/Fechas";
 import Home from "../pages/Home/Home";
+import NDcapacitaciones from "../pages/NDcapacitaciones/NDcapacitaciones";
 import Programas from "../pages/Programas/Programas";
 
 const Router = () => {
@@ -15,6 +16,7 @@ const Router = () => {
         <Routes>
           <Route path="home" element={<Home />} />
           <Route path="contacto" element={<Contacto />} />
+          <Route path="info-nd-capacitaciones" element={<NDcapacitaciones />} />
           <Route path="fechas" element={<Fechas />} />
           <Route path="FAQ" element={<FAQ />} />
           <Route path="programas" element={<Programas />} />

@@ -3,14 +3,18 @@
     h3 {
       text-align: center;
       padding: 3%;
+      border-bottom: 1px solid black;
     }
+  }
+  &__h3 {
+    background-color: var(--primario);
   }
   &__info {
     display: flex;
     justify-content: space-around;
     margin: 5%;
     h3 {
-      border: 3px double #da2f2f;
+      border: 3px solid #da2f2f;
     }
     h3::after {
       content: " >";
@@ -25,5 +29,10 @@
   }
   &__width {
     width: 600px;
+  }
+  &__containerimg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
