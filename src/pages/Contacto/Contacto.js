@@ -146,14 +146,13 @@ const Contacto = () => {
             </div>
 
             <p>
-              <i className="fas fa-map-marker-alt"></i> Av. Corrientes 9999,
-              Prov. Bs As
+              <i className="fas fa-map-marker-alt"></i> VIANI 230, Prov. Bs As
             </p>
-            <p>Código postal C1231</p>
+            <p>Código postal B6400</p>
             <p>
-              <i className="fas fa-phone"></i> Tel.: (2392) 0000-0000
+              <i className="fas fa-phone"></i> Tel.: (02392) 15512249
             </p>
-            <p>email@email.com.ar</p>
+            <p>nicolasdepaulodclauquen@gmail.com</p>
             <div className="contacto__img">
               <img src={img} alt="comunicate" />
             </div>

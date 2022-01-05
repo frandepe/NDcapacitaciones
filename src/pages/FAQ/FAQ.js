@@ -9,30 +9,40 @@ const FAQ = () => {
         <Acordion
           num="1"
           pregunta="¿Cómo me inscribo al curso?"
-          respuesta="sarasa!!!"
+          respuesta="La inscripcion a los cursos se realiza mediante la sección de contactos o al WhatsApp 2392512249"
         />
         <Acordion
           num="2"
           pregunta="¿Cúales son las formas de pago?"
-          respuesta="racataa!"
+          respuesta="El pago de la capacitacion se puede realizar mediante las siguientes formas: Cuenta DNI, Mercado de Pago, Transferencia Bancaria"
         />
-        <Acordion num="3" pregunta="Cómo recibo mi certificado?" />
-        <Acordion num="4" pregunta="¿Cómo es la modalidad de los cursos?" />
+        <Acordion
+          num="3"
+          pregunta="Cómo recibo mi certificado?"
+          respuesta="Una vez aprobado el curso, se remitira via mail el correspondiente certificado de aprobacion del curso"
+        />
+        <Acordion
+          num="4"
+          pregunta="¿Cómo es la modalidad de los cursos?"
+          respuesta="Los cursos son de manera presencial, con un cupo por Protocolo COVID19"
+        />
         <Acordion
           num="5"
           pregunta="¿Necesito tener un conocimiento previo para tomar un curso?"
+          respuesta="No se necesita tener un conocimiento previo de las tematicas de los cursos ya que los mismos tienen una explicacion muy sencilla aun para personas que no cuentan con una experiancia anterior."
         />
         <Acordion
           num="6"
           pregunta="¿A quiénes van dirigidas las capacitaciones?"
+          respuesta="Las capacitacion estan dirigidas a toda aquella persona que tenga interes de aprender las tecnicas de Socorrismo y predisposicion a ayudar al prógimo. Sin limites de edad desde los 12 años."
         />
         <Acordion
           num="7"
           pregunta="¿Por qué hacer un curso de primeros auxilios?"
-          respuesta="Por norma general, los objetivos que se fijan en este tipo de formación son aliviar el dolor de la víctima, evitar complicaciones mayores y propiciar una pronta recuperación. Gracias a esta disciplina es posible ofrecer los primeros cuidados en una situación de accidente de tráfico, una catástrofe natural, hemorragias, alergias, quemaduras, fracturas, etc., independientemente del lugar donde se produzca el incidente. Desde otro punto de vista, los cursos de primeros auxilios también se presentan como una forma de promocionar la salud. A través de ellos se toma conciencia de la problemática a la que todo el mundo puede enfrentarse alguna vez en su vida y qué importancia tiene trabajar por conseguir un nivel óptimo de bienestar.  "
+          respuesta="Saber que hacer ante una situacion de emergencias puede ser la diferencia entre la vida y la muerte, tener un conocimiento de las tecnicas a aplicar hasta el arribo de un Servicio de Emergencias puede salvar una vida."
         />
-        <Acordion num="8" />
-        <Acordion num="9" />
+        <Acordion />
+        <Acordion />
       </Accordion>
     </div>
   );

@@ -10,11 +10,11 @@ const NecesidadDeCapacitar = () => {
     <div className="divContainer">
       <Container>
         <Row className="NecesidadDeCapacitar__container">
-          <Col sm={4} className="colimg">
+          <Col className="colimg">
             <img src={img2} width="540" height="350" alt={"Capatitacion RCP"} />
           </Col>
           <Col>
-            <h3>¿Con qué propócito realizamos las capacitaciones?</h3>
+            <h3>¿Con qué propósito realizamos las capacitaciones?</h3>
             <p>
               “El objetivo de este tipo de capacitaciones es mejorar nuestra
               calidad de servicios y brindar seguridad a los clientes. Queremos
@@ -26,9 +26,7 @@ const NecesidadDeCapacitar = () => {
         </Row>
         <Row className="NecesidadDeCapacitar__container2">
           <Col>
-            <h3>
-              ¿Por qué es necesario capacitarse en RCP y Primeros Auxilios?
-            </h3>
+            <h3>¿En qué consiste la RCP?</h3>
             <p>
               “La RCP tradicionalmente consistía en realizar respiración boca a
               boca intercalando compresiones torácicas. Actualmente se centra

@@ -14,3 +14,11 @@
     }
   }
 }
+@media (max-width: 600px) {
+  .confian {
+    &__container {
+      display: flex;
+      justify-content: center;
+    }
+  }
+}

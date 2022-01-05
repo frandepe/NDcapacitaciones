@@ -21,25 +21,6 @@ const Programas = () => {
       </div>
       <Cards />
 
-      {/* <iframe
-        width="560"
-        height="315"
-        src="https://www.youtube.com/embed/_n-mMhTDAUE"
-        title="YouTube video player"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen
-      /> */}
-      {/* <iframe
-        width="560"
-        height="315"
-        src="https://www.youtube.com/embed/xIejawqKj1o"
-        title="YouTube video player"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen
-      ></iframe> */}
-
       <div className="programas__contenedorInfo">
         <div className="programas__info">
           <h3>Contenido</h3>
