@@ -18,7 +18,7 @@ const FAQ = () => {
         />
         <Acordion
           num="3"
-          pregunta="Cómo recibo mi certificado?"
+          pregunta="¿Cómo recibo mi certificado?"
           respuesta="Una vez aprobado el curso, se remitira via mail el correspondiente certificado de aprobacion del curso"
         />
         <Acordion

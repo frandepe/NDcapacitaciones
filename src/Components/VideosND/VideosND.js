@@ -10,7 +10,7 @@ const VideosND = () => {
             <iframe
               width="560"
               height="315"
-              src="https://www.youtube.com/embed/1O9yrxPGGcU"
+              src="https://www.youtube.com/embed/1O9yrxPGGcU?origin=https://braintool.org"
               title="YouTube video player"
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -21,7 +21,7 @@ const VideosND = () => {
             <iframe
               width="560"
               height="315"
-              src="https://www.youtube.com/embed/xIejawqKj1o"
+              src="https://www.youtube.com/embed/xIejawqKj1o?origin=https://braintool.org"
               title="YouTube video player"
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -32,7 +32,7 @@ const VideosND = () => {
             <iframe
               width="560"
               height="315"
-              src="https://www.youtube.com/embed/yoYdL98Ibwk"
+              src="https://www.youtube.com/embed/yoYdL98Ibwk?origin=https://braintool.org"
               title="YouTube video player"
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -40,7 +40,6 @@ const VideosND = () => {
             ></iframe>
           </Col>
         </Row>
-       
       </Container>
     </div>
   );

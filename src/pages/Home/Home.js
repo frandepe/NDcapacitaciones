@@ -1,16 +1,33 @@
-import React from "react";
 import Slider from "../../Components/Slider/Slider";
 import { Container, Row, Col, Stack } from "react-bootstrap";
 import "./Home.scss";
 import Leyes from "../../Components/Leyes/Leyes";
 import Confian from "../../Components/Confian/Confian";
 import NecesidadDeCapacitar from "../../Components/NecesidadDeCapacitar/NecesidadDeCapacitar";
+import { useEffect } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
 const Home = () => {
+  useEffect(() => {
+    gsap.from(".container-introduction", {
+      scrollTrigger: {
+        trigger: ".container-introduction",
+        start: "top 90%",
+        end: "bottom 60%",
+      },
+      duration: 2,
+      ease: "ease-in",
+      y: 100,
+      opacity: 0,
+    });
+  }, []);
+
   return (
     <div>
       <Slider />
-      <Container>
+      <Container className="container-introduction">
         <Row>
           <Col className="home__titular" sm={12}>
             <h1>

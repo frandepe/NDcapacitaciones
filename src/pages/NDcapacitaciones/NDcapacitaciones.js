@@ -10,8 +10,25 @@ import img7 from "./capacitacion1.jpg";
 import img8 from "./capacitacion2.jpg";
 import img9 from "./capacitacion3.jpg";
 import "./NDcapacitaciones.scss";
+import { useEffect } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
 const NDcapacitaciones = () => {
+  useEffect(() => {
+    gsap.from(".NDcapacitaciones__banner", {
+      scrollTrigger: {
+        trigger: ".NDcapacitaciones__banner",
+        start: "top 90%",
+        end: "bottom 60%",
+      },
+      duration: 2,
+      ease: "ease-in",
+      opacity: 0,
+    });
+  }, []);
+
   return (
     <div>
       <div className="NDcapacitaciones__banner">

@@ -33,7 +33,7 @@ const Footer = () => {
           </Col>
         </Row>
         <Row className="footer__colup">
-          <Col>© CPA | Todos los derechos reservados 2022</Col>
+          <Col>© FMD | Todos los derechos reservados 2022</Col>
           <Col>
             Desarrollo y diseño por{" "}
             <a href="https://www.linkedin.com/in/franco-de-paulo-13509b186/">

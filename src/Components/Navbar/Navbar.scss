@@ -41,8 +41,14 @@
     }
   }
 }
-.pepe {
+.nav-cont {
   position: sticky;
   top: 0;
   z-index: 10;
+}
+@media (max-width: 600px) {
+  .img-logotipo {
+    width: 250px;
+    height: auto;
+  }
 }

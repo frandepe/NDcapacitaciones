@@ -5,7 +5,7 @@ import "bootstrap/dist/css/bootstrap.css";
 
 const Navbar3 = () => {
   return (
-    <div className="pepe">
+    <div className="nav-cont">
       <Navbar bg="light" expand="lg" sticky="top">
         <Container fluid>
           <Navbar.Brand href="#home">
@@ -13,7 +13,7 @@ const Navbar3 = () => {
               src={logo}
               width="340"
               height="auto"
-              className="d-inline-block align-top"
+              className="d-inline-block align-top img-logotipo"
               alt={"logo"}
             />
           </Navbar.Brand>

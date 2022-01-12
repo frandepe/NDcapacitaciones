@@ -2,8 +2,36 @@ import "./Programas.scss";
 import Cards from "../../Components/Cards/Cards";
 import imgPersonas from "./peopleIcon.png";
 import imgEmpresa from "./empresaIcon.png";
+import { useEffect } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
 const Programas = () => {
+  useEffect(() => {
+    gsap.from(".programas__conth2", {
+      scrollTrigger: {
+        trigger: ".programas__conth2",
+        start: "top 90%",
+        end: "bottom 60%",
+      },
+      duration: 2,
+      ease: "ease.out",
+      opacity: 0,
+    });
+    gsap.from(".programas__contenedorInfo", {
+      scrollTrigger: {
+        trigger: ".programas__info",
+        start: "top 90%",
+        end: "bottom 60%",
+      },
+      x: -100,
+      duration: 2,
+      ease: "ease.out",
+      opacity: 0,
+    });
+  }, []);
+
   return (
     <div className="programas__div">
       <div className="programas__divp">
@@ -14,7 +42,7 @@ const Programas = () => {
         </p>
       </div>
       <div className="programas__conth2">
-        <h2>
+        <h2 className="programas__h2">
           El saber que hacer, permite actuar con seguridad… permite salvar una
           vida
         </h2>

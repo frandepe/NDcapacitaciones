@@ -1,15 +1,41 @@
 import InfoFecha from "../../Components/InfoFecha/InfoFecha";
 import "./Fechas.scss";
 import imgFecha from "./imgPapa.jpg";
+import { useEffect } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
 const Fechas = () => {
+  useEffect(() => {
+    gsap.from(".fechas__h3", {
+      scrollTrigger: {
+        trigger: ".fechas__h3",
+        start: "top 90%",
+        end: "bottom 60%",
+      },
+      duration: 2,
+      ease: "ease-in",
+      opacity: 0,
+    });
+    gsap.from(".fechas__info", {
+      scrollTrigger: {
+        trigger: ".fechas__info",
+        start: "top 90%",
+        end: "bottom 60%",
+      },
+      duration: 2,
+      x: -100,
+      ease: "ease-in",
+      opacity: 0,
+    });
+  }, []);
   return (
     <div className="fechas__container">
       <h3 className="fechas__h3">
-        Brindamos diferentes cursos relacionados con la resolución 905/15 para
-        capacitaciones en la empresa y en nuestro centro. Tambien puede tomar
-        los cursos cualquier persona que desee ampliar sus conocimientos en
-        Salud.
+        Brindamos diferentes cursos de capacitaciones tanto para empresas como
+        para nuestra comunidad. Puede tomar los cursos cualquier persona que
+        desee ampliar sus conocimientos en Salud.
       </h3>
       <div className="fechas__info">
         <div className="fechas__width">
