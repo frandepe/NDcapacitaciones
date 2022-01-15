@@ -65,7 +65,7 @@ const Cards = () => {
               en Reanimación CerebroCardiopulmonar y uso del desfibrilador
               externo. y Certificar la Zona Cardio Segura.
             </Card.Text>
-            <div className="cards__btn">
+            <div className="cards__btn btn2">
               <Button href="contacto" variant="primary">
                 Más información
               </Button>
@@ -83,7 +83,7 @@ const Cards = () => {
               actuar ante enfermedades súbitas y lesiones frecuentes en mascotas
               hasta que llegue el veterinario o arribe al hospital veterinario.
             </Card.Text>
-            <div className="cards__btn">
+            <div className="cards__btn btn2">
               <Button href="contacto" variant="primary">
                 Más información
               </Button>

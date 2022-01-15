@@ -44,6 +44,14 @@ const Fechas = () => {
             fecha="14 de Enero"
             titulo="Socorrismo Urbano con RCP y DEA"
             localidad="Pellegrini"
+            lugar="Playon complejo polideportivo"
+            horario="20hs"
+            descripcion="Este curso permitirá al profesional adquirir conocimientos y desarrollar competencias sobre el soporte vital básico y avanzado y el reconocimiento de cuadros como taquiarritmias, bradiarritmias y shock, entre otros, para su correcto abordaje y tratamiento."
+          />
+          <InfoFecha
+            fecha="20 de Enero"
+            titulo="Socorrismo Urbano con RCP y DEA"
+            localidad="Trenque Lauquen"
             lugar="No definido"
             horario="20hs"
             descripcion="Este curso permitirá al profesional adquirir conocimientos y desarrollar competencias sobre el soporte vital básico y avanzado y el reconocimiento de cuadros como taquiarritmias, bradiarritmias y shock, entre otros, para su correcto abordaje y tratamiento."
