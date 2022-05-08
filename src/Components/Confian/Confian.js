@@ -7,6 +7,8 @@ import { Container, Col, Row } from "react-bootstrap";
 import { useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import LazyLoad from "../LazyLoad/LazyLoad";
+
 gsap.registerPlugin(ScrollTrigger);
 
 const Confian = () => {
@@ -30,16 +32,19 @@ const Confian = () => {
       <Container className="confian__flexImg">
         <Row>
           <Col sm>
-            <img src={imgConfian1} alt="American College of Emergency" />
+            <LazyLoad src={imgConfian1} alt="American College of Emergency" />
           </Col>
           <Col sm>
-            <img src={imgConfian2} alt="Emergency Care and Safety Institute " />
+            <LazyLoad
+              src={imgConfian2}
+              alt="Emergency Care and Safety Institute "
+            />
           </Col>
           <Col sm>
-            <img src={imgConfian3} alt="Aider" />
+            <LazyLoad src={imgConfian3} alt="Aider" />
           </Col>
           <Col sm>
-            <img
+            <LazyLoad
               src={imgConfian4}
               alt="Organización Panamericana de la Salud"
             />

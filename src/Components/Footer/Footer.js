@@ -10,7 +10,7 @@ const Footer = () => {
             <p>
               <i className="fas fa-phone"></i>Tel.: (02392) 15512249
             </p>
-            <p>nicolasdepaulodclauquen@gmail.com</p>
+            <p>ndcapacitaciones@gmail.com</p>
           </Col>
           <Col xs={6} md={4}>
             <b>Trenque Lauquen</b>

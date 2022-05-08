@@ -7,6 +7,7 @@ import "./NecesidadDeCapacitar.scss";
 import { useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import LazyLoad from "../LazyLoad/LazyLoad";
 gsap.registerPlugin(ScrollTrigger);
 
 const NecesidadDeCapacitar = () => {
@@ -43,7 +44,12 @@ const NecesidadDeCapacitar = () => {
       <Container>
         <Row className="NecesidadDeCapacitar__container">
           <Col className="colimg colimg1">
-            <img src={img2} width="540" height="350" alt={"Capatitacion RCP"} />
+            <LazyLoad
+              src={img2}
+              width="540"
+              height="350"
+              alt={"Capatitacion RCP"}
+            />
           </Col>
           <Col className="NecesidadDeCapacitar__col">
             <h3>¿Con qué propósito realizamos las capacitaciones?</h3>
@@ -68,7 +74,7 @@ const NecesidadDeCapacitar = () => {
             </p>
           </Col>
           <Col className="colimg colimg2">
-            <img
+            <LazyLoad
               align="right"
               src={img1}
               width="540"
@@ -79,7 +85,12 @@ const NecesidadDeCapacitar = () => {
         </Row>
         <Row className="NecesidadDeCapacitar__container3">
           <Col className="colimg colimg3">
-            <img src={img3} width="540" height="350" alt={"Capatitacion RCP"} />
+            <LazyLoad
+              src={img3}
+              width="540"
+              height="350"
+              alt={"Capatitacion RCP"}
+            />
           </Col>
           <Col className="NecesidadDeCapacitar__col">
             <h3>Convertite en protagonista</h3>

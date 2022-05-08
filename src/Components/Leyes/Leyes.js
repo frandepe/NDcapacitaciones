@@ -3,6 +3,7 @@ import "./Leyes.scss";
 import { useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import CustomReactPlayer from "../VideosND/VideoPlayer/CustomVideoPlayer";
 gsap.registerPlugin(ScrollTrigger);
 
 const Leyes = () => {
@@ -42,15 +43,7 @@ const Leyes = () => {
             </p>
           </Col>
           <Col className="leyes__right" sm>
-            <iframe
-              width="560"
-              height="315"
-              src="https://www.youtube.com/embed/fcSW1beK-sc?origin=https://braintool.org"
-              title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-            ></iframe>
+            <CustomReactPlayer url="https://www.youtube.com/embed/fcSW1beK-sc?origin=https://braintool.org" />
           </Col>
         </Row>
         <Row>

@@ -43,6 +43,7 @@ const FAQ = () => {
         />
         <Acordion />
         <Acordion />
+        <Acordion />
       </Accordion>
     </div>
   );

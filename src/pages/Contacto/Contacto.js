@@ -150,9 +150,9 @@ const Contacto = () => {
             </p>
             <p>Código postal B6400</p>
             <p>
-              <i className="fas fa-phone"></i> Tel.: (02392) 15512249
+              <i className="fas fa-phone"></i> Tel : (02392) 15512249
             </p>
-            <p>nicolasdepaulodclauquen@gmail.com</p>
+            <p>ndcapacitaciones@gmail.com</p>
             <div className="contacto__img">
               <img src={img} alt="comunicate" />
             </div>

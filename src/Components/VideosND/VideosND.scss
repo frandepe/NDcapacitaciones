@@ -2,18 +2,18 @@
   &__container {
     margin-top: 5%;
     margin-bottom: 5%;
-    iframe {
-      border-bottom: 6px ridge #da2f2f;
-      box-shadow: 4px 4px 5px 0px rgba(0, 0, 0, 0.75);
-      -webkit-box-shadow: 4px 4px 5px 0px rgba(0, 0, 0, 0.75);
-      -moz-box-shadow: 4px 4px 5px 0px rgba(0, 0, 0, 0.75);
-    }
+    // iframe {
+    //   border-bottom: 6px ridge #da2f2f;
+    //   box-shadow: 4px 4px 5px 0px rgba(0, 0, 0, 0.75);
+    //   -webkit-box-shadow: 4px 4px 5px 0px rgba(0, 0, 0, 0.75);
+    //   -moz-box-shadow: 4px 4px 5px 0px rgba(0, 0, 0, 0.75);
+    // }
   }
 }
-@media (max-width: 600px) {
-  .VideosND__container {
-    iframe {
-      width: 90vw;
-    }
-  }
-}
+// @media (max-width: 600px) {
+//   .VideosND__container {
+//     iframe {
+//       width: 90vw;
+//     }
+//   }
+// }

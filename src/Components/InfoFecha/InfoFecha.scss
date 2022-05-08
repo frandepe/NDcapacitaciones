@@ -38,6 +38,9 @@
   &__button {
     margin-top: 3%;
   }
+  &__cursoConcluido {
+    color: var(--cuarto);
+  }
 }
 
 @media (max-width: 600px) {

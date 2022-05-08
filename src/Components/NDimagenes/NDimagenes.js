@@ -1,5 +1,6 @@
 import "./NDimagenes.scss";
 import { Row, Col, Container } from "react-bootstrap";
+import LazyLoad from "../LazyLoad/LazyLoad";
 
 const NDimagenes = ({ descripcion, imagen1, imagen2, imagen3, color }) => {
   return (
@@ -12,13 +13,13 @@ const NDimagenes = ({ descripcion, imagen1, imagen2, imagen3, color }) => {
         </Row>
         <Row gap={2} className="row-md-4 mx-auto">
           <Col>
-            <img className="col1" src={imagen1} alt="img"></img>
+            <LazyLoad className="col1" src={imagen1} alt="img" />
           </Col>
           <Col>
-            <img className="col2" src={imagen2} alt="img"></img>
+            <LazyLoad className="col2" src={imagen2} alt="img" />
           </Col>
           <Col>
-            <img className="col3" src={imagen3} alt="img"></img>
+            <LazyLoad className="col3" src={imagen3} alt="img" />
           </Col>
         </Row>
       </Container>

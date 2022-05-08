@@ -1,0 +1,8 @@
+.video__container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  position: relative;
+  height: 330px;
+  z-index: 1;
+  overflow: hidden;
+}

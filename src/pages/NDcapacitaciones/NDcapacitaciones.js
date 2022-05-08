@@ -9,6 +9,13 @@ import img6 from "./cap3.jpeg";
 import img7 from "./capacitacion1.jpg";
 import img8 from "./capacitacion2.jpg";
 import img9 from "./capacitacion3.jpg";
+import img10 from "./img-patrulla-rural-1.jpeg";
+import img11 from "./img-patrulla-rural-2.jpeg";
+import img12 from "./img-patrulla-rural-3.jpg";
+import img13 from "./img-aniversario-pellegrini-1.jpeg";
+import img14 from "./img-aniversario-pellegrini-2.jpeg";
+import img15 from "./img-aniversario-pellegrini-3.jpeg";
+
 import "./NDcapacitaciones.scss";
 import { useEffect } from "react";
 import gsap from "gsap";
@@ -35,16 +42,16 @@ const NDcapacitaciones = () => {
         <h2>ND capacitaciones</h2>
         <b>Promovemos</b>
         <p>
-          <i class="fas fa-angle-double-right"></i> Capacitaciones de calidad
-          con reconocimiento nacional e internacional.
+          <i className="fas fa-angle-double-right"></i> Capacitaciones de
+          calidad con reconocimiento nacional e internacional.
         </p>
         <p>
-          <i class="fas fa-angle-double-right"></i> Educación para la vida y
+          <i className="fas fa-angle-double-right"></i> Educación para la vida y
           formación para el trabajo.
         </p>
         <p>
-          <i class="fas fa-angle-double-right"></i> Formación continua según las
-          necesidades sociales y las exigencias del mercado laboral.
+          <i className="fas fa-angle-double-right"></i> Formación continua según
+          las necesidades sociales y las exigencias del mercado laboral.
         </p>
       </div>
       <VideosND />
@@ -72,6 +79,20 @@ const NDcapacitaciones = () => {
         imagen1={img7}
         imagen2={img8}
         imagen3={img9}
+      />
+      <NDimagenes
+        color="#64d0c3"
+        descripcion="La Coordinación de Defensa Civil Municipal, a cargo de Nicolás De Paulo, brindó una capacitación sobre Primeros Auxilios con técnicas de Reanimación Cardiopulmonar (RCP) y uso del Desfibrilador Externo Automático (DEA) a personal de la Patrulla Rural de Trenque Lauquen."
+        imagen1={img10}
+        imagen2={img11}
+        imagen3={img12}
+      />
+      <NDimagenes
+        color="#da2f2f"
+        descripcion="El Municipio a través del área de Cultura, realizó con total éxito la Peatonal 123, con la Fiesta Regional de la Galleta de Campo. Una multitud de espectadores, entre jóvenes y adultos se dieron cita en la Peatonal, que se vio llena de color, alegría y estuvo vestida de distintos stands."
+        imagen1={img13}
+        imagen2={img14}
+        imagen3={img15}
       />
     </div>
   );

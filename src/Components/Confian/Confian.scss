@@ -6,19 +6,13 @@
   }
   &__flexImg {
     width: 100%;
-    display: flex;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 10px;
+
     img {
       width: 200px;
       height: 100px;
-    }
-  }
-}
-@media (max-width: 600px) {
-  .confian {
-    &__container {
-      display: flex;
-      justify-content: center;
     }
   }
 }
