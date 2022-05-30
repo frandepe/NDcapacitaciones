@@ -1,40 +1,14 @@
 .cards {
-  &__div {
-    margin-left: 20%;
-    margin-right: 20%;
-    margin-bottom: 5%;
+  &__imagen {
+    filter: blur(1px) opacity(78%);
+    -webkit-filter: blur(1px) opacity(78%);
+    -moz-filter: blur(1px) opacity(78%);
+    opacity: 0.3;
+    height: 500px;
   }
-  &__card {
-    margin: 5%;
-    border: 1px solid var(--secundario2) !important;
-    position: relative;
+  &__titulo {
+    color: var(--primario);
   }
-
-  &__btn {
-    transition: all 300ms ease-in;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 49%;
-    backdrop-filter: blur(2px);
-    position: absolute;
-    opacity: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    button {
-      box-shadow: 2px 2px 9px 0px rgba(0, 0, 0, 0.75);
-      -webkit-box-shadow: 2px 2px 9px 0px rgba(0, 0, 0, 0.75);
-      -moz-box-shadow: 2px 2px 9px 0px rgba(0, 0, 0, 0.75);
-    }
-  }
-  &__btn:hover {
-    opacity: 1;
-  }
-}
-
-.btn2 {
-  height: 57%;
 }
 
 @media (max-width: 600px) {
@@ -49,5 +23,20 @@
       opacity: 1;
       backdrop-filter: none;
     }
+  }
+  .dataCards {
+    &__container {
+      margin: 50px;
+    }
+  }
+}
+
+.dataCards {
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
   }
 }

@@ -11,9 +11,9 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Home = () => {
   useEffect(() => {
-    gsap.from(".container-introduction", {
+    gsap.from(".home__containerIntroduction", {
       scrollTrigger: {
-        trigger: ".container-introduction",
+        trigger: ".home__containerIntroduction",
         start: "top 90%",
         end: "bottom 60%",
       },
@@ -27,7 +27,7 @@ const Home = () => {
   return (
     <div>
       <Slider />
-      <Container className="container-introduction">
+      <Container className="home__containerIntroduction">
         <Row>
           <Col className="home__titular" sm={12}>
             <h1>

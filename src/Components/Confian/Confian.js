@@ -3,6 +3,7 @@ import imgConfian1 from "./confian1.jfif";
 import imgConfian2 from "./confian2.jpg";
 import imgConfian3 from "./confian3.png";
 import imgConfian4 from "./confian4.jpg";
+import imgConfian5 from "./confian5.png";
 import { Container, Col, Row } from "react-bootstrap";
 import { useEffect } from "react";
 import gsap from "gsap";
@@ -48,6 +49,9 @@ const Confian = () => {
               src={imgConfian4}
               alt="Organización Panamericana de la Salud"
             />
+          </Col>
+          <Col sm>
+            <LazyLoad src={imgConfian5} alt="Scania" />
           </Col>
         </Row>
       </Container>

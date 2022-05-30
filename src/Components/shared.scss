@@ -1,0 +1,61 @@
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+  height: 80vh;
+
+  &__input {
+    width: 500px;
+  }
+}
+
+.container_section {
+  margin-bottom: 20%;
+}
+
+.change-button-edit {
+  border: 1px solid black;
+  padding: 2px 4px 2px 4px;
+  text-align: center;
+}
+
+.change-button-delete {
+  border: 1px solid black;
+  width: 30px;
+  height: auto;
+  text-align: center;
+  padding-top: 1px;
+  color: var(--cuarto);
+}
+
+.btn-nuevo {
+  display: flex;
+  justify-content: space-around;
+}
+
+/*** FORMS ***/
+
+.container_abm {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5%;
+}
+
+.container_form {
+  width: 80%;
+}
+
+.form_inputs span {
+  color: var(--secundario2);
+  margin-left: 20px;
+}
+
+.form_radioCheck {
+  padding: 10px;
+}
+
+.form_radioCheck input {
+  margin: 5px;
+}

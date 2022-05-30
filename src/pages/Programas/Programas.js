@@ -1,10 +1,10 @@
 import "./Programas.scss";
-import Cards from "../../Components/Cards/Cards";
 import imgPersonas from "./peopleIcon.png";
 import imgEmpresa from "./empresaIcon.png";
 import { useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import DataCards from "../../Components/Cards/DataCards";
 gsap.registerPlugin(ScrollTrigger);
 
 const Programas = () => {
@@ -47,8 +47,8 @@ const Programas = () => {
           vida
         </h2>
       </div>
-      <Cards />
 
+      <DataCards />
       <div className="programas__contenedorInfo">
         <div className="programas__info">
           <h3>Contenido</h3>

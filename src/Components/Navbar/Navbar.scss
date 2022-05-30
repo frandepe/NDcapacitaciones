@@ -1,6 +1,6 @@
 .Navbar3 {
   &__nav {
-    margin-left: 30%;
+    margin-left: 20%;
     font-weight: bold;
   }
   &__losli {
@@ -32,6 +32,10 @@
     b {
       color: var(--secundario2);
     }
+  }
+  &__icon {
+    margin-bottom: 7px;
+    font-size: 1.2em;
   }
   &__telefonos {
     margin-left: 10px;

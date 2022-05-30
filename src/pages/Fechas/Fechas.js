@@ -1,12 +1,44 @@
-import InfoFecha from "../../Components/InfoFecha/InfoFecha";
+// import InfoFecha from "../../Components/InfoFecha/InfoFecha";
 import "./Fechas.scss";
-import imgFecha from "./imgPapa.jpg";
 import { useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Countdown from "react-countdown";
+import { Button } from "react-bootstrap";
+import { useSelector, useDispatch } from "react-redux";
+import { cursosAction } from "../../redux/actions/cursosdb";
 gsap.registerPlugin(ScrollTrigger);
 
 const Fechas = () => {
+  const dispatch = useDispatch();
+  const { cursosInfo } = useSelector((store) => store.cursos);
+  console.log(cursosInfo);
+
+  useEffect(() => {
+    dispatch(cursosAction(cursosInfo));
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [dispatch]);
+  const Completionist = () => (
+    <span className="infofecha__cursoConcluido">Este curso ha concluído</span>
+  );
+
+  const renderer = ({ days, hours, minutes, completed }) => {
+    if (completed) {
+      return <Completionist />;
+    } else {
+      return (
+        <div>
+          <p>
+            {`Aún quedan:
+					${days} días, ${hours} horas, ${minutes} minutos para
+					participar`}
+          </p>
+        </div>
+      );
+    }
+  };
+
   useEffect(() => {
     gsap.from(".fechas__h3", {
       scrollTrigger: {
@@ -40,52 +72,42 @@ const Fechas = () => {
       <div className="fechas__info">
         <div className="fechas__width">
           <h3>Próximos cursos</h3>
-          <InfoFecha
-            fecha="17 de Mayo"
-            countdown="2022-05-17T14:20:00"
-            titulo="Socorrismo urbano con RCP y DEA"
-            localidad="Trenque Lauquen"
-            lugar="A definir"
-            horario="20hs"
-            descripcion="Este curso permitirá al profesional adquirir conocimientos y desarrollar competencias sobre el soporte vital básico y avanzado y el reconocimiento de cuadros como taquiarritmias, bradiarritmias y shock, entre otros, para su correcto abordaje y tratamiento."
-          />
-          <InfoFecha
-            fecha="22 de Marzo"
-            countdown="2022-03-22T14:20:00"
-            titulo="Socorrismo urbano con RCP y DEA"
-            localidad="Trenque Lauquen"
-            lugar="La Joya Griffa Gym"
-            horario="20hs"
-            descripcion="Este curso permitirá al profesional adquirir conocimientos y desarrollar competencias sobre el soporte vital básico y avanzado y el reconocimiento de cuadros como taquiarritmias, bradiarritmias y shock, entre otros, para su correcto abordaje y tratamiento."
-          />
-          <InfoFecha
-            countdown="2022-01-22T14:12:00"
-            titulo="RCP y Primeros auxilios"
-            localidad="Trenque Lauquen"
-            lugar="instalaciones del Comando de Prevención Rural"
-            horario="17hs"
-            descripcion="El taller forma parte de las actividades que viene realizando la Coordinación de Defensa Civil Municipal en distintas instituciones, como escuelas, jardines maternales y dependencias policiales, entre otras, y que apunta a brindar conocimientos en primeros auxilios para poder actuar en la emergencia."
-          />
 
-          <InfoFecha
-            countdown="2022-01-20T14:12:00"
-            titulo="Socorrismo Urbano con RCP y DEA"
-            localidad="Trenque Lauquen"
-            lugar="No definido"
-            horario="20hs"
-            descripcion="Este curso permitirá al profesional adquirir conocimientos y desarrollar competencias sobre el soporte vital básico y avanzado y el reconocimiento de cuadros como taquiarritmias, bradiarritmias y shock, entre otros, para su correcto abordaje y tratamiento."
-          />
-          <InfoFecha
-            countdown="2022-01-14T14:12:00"
-            titulo="Socorrismo Urbano con RCP y DEA"
-            localidad="Pellegrini"
-            lugar="Playon complejo polideportivo"
-            horario="20hs"
-            descripcion="Este curso permitirá al profesional adquirir conocimientos y desarrollar competencias sobre el soporte vital básico y avanzado y el reconocimiento de cuadros como taquiarritmias, bradiarritmias y shock, entre otros, para su correcto abordaje y tratamiento."
-          />
-        </div>
-        <div className="fechas__containerimg">
-          <img src={imgFecha} alt="Img cardio" />
+          <div>
+            {cursosInfo?.cursos?.map((element) => {
+              const finishDate = new Date(element.countdown);
+              return (
+                <div className="infofecha__container" key={element.id}>
+                  <h4>{element.titulo}</h4>
+                  <p>
+                    <span>Temario:</span> {element.descripcion}
+                  </p>
+                  <p>
+                    <span>Fecha:</span> {element.fecha}{" "}
+                    <Countdown date={finishDate} renderer={renderer} />
+                  </p>
+                  <p>
+                    <span>Localidad:</span> {element.localidad}
+                  </p>
+                  <p>
+                    <span>Lugar:</span> {element.lugar}
+                  </p>
+                  <p>
+                    <span>Horario:</span> {element.horario} hs
+                  </p>
+                  <b>
+                    {element.certificado &&
+                      "Certificado nacional o internacional"}
+                  </b>
+                  {finishDate > new Date() && (
+                    <div className="infofecha__button">
+                      <Button href="contacto">Consultar</Button>
+                    </div>
+                  )}
+                </div>
+              );
+            })}
+          </div>
         </div>
       </div>
     </div>

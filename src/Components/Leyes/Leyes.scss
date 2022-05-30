@@ -1,8 +1,8 @@
 .leyes {
   &__container {
-    margin-top: 5%;
+    margin-top: 8%;
     border-top: solid 1px black;
-    padding-top: 5%;
+    padding-top: 10%;
     margin-bottom: 5%;
     border-bottom: solid 1px black;
     padding-bottom: 5%;
@@ -10,15 +10,6 @@
 }
 
 .leyesb {
-  margin-top: 2%;
-}
-
-@media (max-width: 600px) {
-  .leyes {
-    &__right {
-      iframe {
-        width: 90vw;
-      }
-    }
-  }
+  margin-top: 5%;
+  margin-bottom: 5%;
 }

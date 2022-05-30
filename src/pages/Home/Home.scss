@@ -3,9 +3,19 @@
     padding: 3%;
     font-size: 1.7em;
   }
+
+  &__containerIntroduction {
+    margin-top: 5%;
+  }
+
   &__sobremi {
     font-size: 1.5em;
   }
+
+  &__instrucciones {
+    border-left: 1px solid var(--cuarto);
+  }
+
   &__inscripciones {
     background-color: var(--cuarto);
     text-align: center;
@@ -26,5 +36,15 @@
   &__inscripciones:hover {
     background-color: var(--primario);
     transition: 0.5s;
+  }
+}
+
+@media (max-width: 575px) {
+  .home {
+    &__instrucciones {
+      padding-top: 10%;
+      padding-bottom: 5%;
+      border-left: none;
+    }
   }
 }

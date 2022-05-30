@@ -2,6 +2,11 @@ import logo from "./Logo.png";
 import "./Navbar.scss";
 import { Navbar, Container, NavDropdown, Nav } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.css";
+import { AiFillHome } from "react-icons/ai";
+import { RiQuestionAnswerFill } from "react-icons/ri";
+import { BsFillCalendarDateFill, BsTelephoneInboundFill } from "react-icons/bs";
+import { GrCertificate } from "react-icons/gr";
+import { MdLocalHospital } from "react-icons/md";
 
 const Navbar3 = () => {
   return (
@@ -25,23 +30,28 @@ const Navbar3 = () => {
               navbarScroll
             >
               <Nav.Link className="Navbar3__losli" href="home">
-                Inicio
+                <AiFillHome className="Navbar3__icon" /> Inicio
               </Nav.Link>
               <Nav.Link className="Navbar3__losli" href="FAQ">
-                FAQ
+                <RiQuestionAnswerFill className="Navbar3__icon" /> FAQ
               </Nav.Link>
+
               <NavDropdown
                 className="Navbar3__losli"
-                title="Capacitaciones"
+                title="🎓 Capacitaciones"
                 id="navbarScrollingDropdown"
               >
-                <NavDropdown.Item href="programas">Programas</NavDropdown.Item>
+                <NavDropdown.Item href="programas">
+                  <GrCertificate className="Navbar3__icon" /> Programas
+                </NavDropdown.Item>
                 <NavDropdown.Item href="fechas">
-                  Próximas Fechas
+                  <BsFillCalendarDateFill className="Navbar3__icon" /> Próximas
+                  Fechas
                 </NavDropdown.Item>
                 <NavDropdown.Divider />
                 <NavDropdown.Item href="info-nd-capacitaciones">
-                  ND Capacitaciones Info
+                  <MdLocalHospital className="Navbar3__icon" /> ND
+                  Capacitaciones Info
                 </NavDropdown.Item>
               </NavDropdown>
               <Nav.Link className="Navbar3__losli" href="contacto">
@@ -50,7 +60,10 @@ const Navbar3 = () => {
             </Nav>
             <div className="Navbar3__contenedor-tel">
               <div>
-                <b>Telefonos útiles:</b>
+                <b>
+                  <BsTelephoneInboundFill className="Navbar3__icon" /> Telefonos
+                  útiles:
+                </b>
               </div>
               <div className="Navbar3__telefonos">
                 <p>
