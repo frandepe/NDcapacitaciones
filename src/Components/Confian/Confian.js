@@ -1,58 +1,61 @@
 import "./Confian.scss";
-import imgConfian1 from "./confian1.jfif";
-import imgConfian2 from "./confian2.jpg";
-import imgConfian3 from "./confian3.png";
-import imgConfian4 from "./confian4.jpg";
-import imgConfian5 from "./confian5.png";
+// import imgConfian1 from "./confian1.jfif";
+// import imgConfian2 from "./confian2.jpg";
+// import imgConfian3 from "./confian3.png";
+// import imgConfian4 from "./confian4.jpg";
+// import imgConfian5 from "./confian5.png";
 import { Container, Col, Row } from "react-bootstrap";
 import { useEffect } from "react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+// import gsap from "gsap";
+// import { ScrollTrigger } from "gsap/ScrollTrigger";
 import LazyLoad from "../LazyLoad/LazyLoad";
+import { useSelector, useDispatch } from "react-redux";
+import { avalAction } from "../../redux/actions/avaldb";
+import Spiner from "../../shared/spiner";
 
-gsap.registerPlugin(ScrollTrigger);
+// gsap.registerPlugin(ScrollTrigger);
 
 const Confian = () => {
+  const dispatch = useDispatch();
+  const { avalInfo, loading } = useSelector((store) => store.aval);
+  console.log(avalInfo);
+
   useEffect(() => {
-    gsap.from(".confian__container", {
-      scrollTrigger: {
-        trigger: ".confian__container",
-        start: "top 90%",
-        end: "bottom 60%",
-      },
-      duration: 2,
-      ease: "ease-in",
-      y: 100,
-      opacity: 0,
-    });
-  }, []);
+    dispatch(avalAction(avalInfo));
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [dispatch]);
+
+  // useEffect(() => {
+  //   gsap.from(".confian__container", {
+  //     scrollTrigger: {
+  //       trigger: ".confian__container",
+  //       start: "top 90%",
+  //       end: "bottom 60%",
+  //     },
+  //     duration: 2,
+  //     ease: "ease-in",
+  //     y: 100,
+  //     opacity: 0,
+  //   });
+  // }, []);
   return (
     <div className="confian__container">
       <h2>Aval</h2>
 
       <Container className="confian__flexImg">
-        <Row>
-          <Col sm>
-            <LazyLoad src={imgConfian1} alt="American College of Emergency" />
-          </Col>
-          <Col sm>
-            <LazyLoad
-              src={imgConfian2}
-              alt="Emergency Care and Safety Institute "
-            />
-          </Col>
-          <Col sm>
-            <LazyLoad src={imgConfian3} alt="Aider" />
-          </Col>
-          <Col sm>
-            <LazyLoad
-              src={imgConfian4}
-              alt="Organización Panamericana de la Salud"
-            />
-          </Col>
-          <Col sm>
-            <LazyLoad src={imgConfian5} alt="Scania" />
-          </Col>
+        <Row className="confian__colImg">
+          {!loading ? (
+            <Spiner />
+          ) : (
+            avalInfo?.aval?.map((element) => {
+              return (
+                <Col key={element.id}>
+                  <LazyLoad src={element.imagen} alt="imagen no encontrada" />
+                </Col>
+              );
+            })
+          )}
         </Row>
       </Container>
     </div>

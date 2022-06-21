@@ -9,11 +9,7 @@ import { LazyLoadImage } from "react-lazy-load-image-component";
  */
 
 const LazyLoad = ({ alt, height, src, width }) => {
-  return (
-    <div>
-      <LazyLoadImage src={src} alt={alt} height={height} width={width} />
-    </div>
-  );
+  return <LazyLoadImage src={src} alt={alt} height={height} width={width} />;
 };
 
 export default LazyLoad;

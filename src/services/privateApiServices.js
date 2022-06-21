@@ -1,8 +1,7 @@
 import axios from "axios";
 
-// const BASE_URL = process.env.DB_URL;
+const BASE_URL = process.env.REACT_APP_BASE_URL;
 // const BASE_URL = "http://localhost:3100/api";
-// const BASE_URL = "https://ndcapacitaciones.herokuapp.com/api";
 
 const tokenn = window.localStorage.getItem("token");
 const config = {
@@ -26,11 +25,7 @@ const config = {
 
 export const privatePostRequest = async (route, postData) => {
   try {
-    const { data } = await axios.post(
-      `${process.env.REACT_APP_BASE_URL}/${route}`,
-      postData,
-      config
-    );
+    const { data } = await axios.post(`${BASE_URL}/${route}`, postData, config);
     return data;
   } catch (error) {
     console.log(error);
@@ -46,11 +41,7 @@ export const privatePostRequest = async (route, postData) => {
 
 export const privatePutRequest = async ({ url, putData }) => {
   try {
-    const res = await axios.put(
-      `${process.env.REACT_APP_BASE_URL}/${url}`,
-      putData,
-      config
-    );
+    const res = await axios.put(`${BASE_URL}/${url}`, putData, config);
     return res;
   } catch (err) {
     console.log(err);
@@ -66,11 +57,7 @@ export const privatePutRequest = async ({ url, putData }) => {
 
 export const privateDeleteRequest = async (route) => {
   try {
-    const { res } = await axios.delete(
-      `${process.env.REACT_APP_BASE_URL}/${route}`,
-      {},
-      config
-    );
+    const { res } = await axios.delete(`${BASE_URL}/${route}`, {}, config);
     return res;
   } catch (err) {
     console.log(err);
@@ -85,10 +72,7 @@ export const privateDeleteRequest = async (route) => {
 
 export const getDataMethodPrivate = async (route) => {
   try {
-    const result = await axios.get(
-      `${process.env.REACT_APP_BASE_URL}/${route}`,
-      config
-    );
+    const result = await axios.get(`${BASE_URL}/${route}`, config);
     console.log(result);
     return result;
   } catch (error) {

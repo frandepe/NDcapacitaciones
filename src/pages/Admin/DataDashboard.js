@@ -1,5 +1,6 @@
 import { GrCertificate } from "react-icons/gr";
 import { MdLocalHospital } from "react-icons/md";
+import { FaHandsHelping } from "react-icons/fa";
 
 export const DataDashboard = [
   {
@@ -9,7 +10,12 @@ export const DataDashboard = [
   },
   {
     icon: <MdLocalHospital />,
-    title: "Capacitaciones",
+    title: "Capacitaciones *No funciona",
     link: "/backoffice/capacitaciones",
+  },
+  {
+    icon: <FaHandsHelping />,
+    title: "Aval",
+    link: "/backoffice/aval",
   },
 ];

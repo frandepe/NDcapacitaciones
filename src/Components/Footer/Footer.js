@@ -29,7 +29,6 @@ const Footer = () => {
             <a href="https://www.instagram.com/nicolasdepaulo911/?hl=es-la">
               <i className="fab fa-instagram"></i>
             </a>
-            <i className="fab fa-twitter-square"></i>
           </Col>
         </Row>
         <Row className="footer__colup">

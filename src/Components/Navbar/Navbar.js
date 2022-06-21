@@ -6,7 +6,7 @@ import { AiFillHome } from "react-icons/ai";
 import { RiQuestionAnswerFill } from "react-icons/ri";
 import { BsFillCalendarDateFill, BsTelephoneInboundFill } from "react-icons/bs";
 import { GrCertificate } from "react-icons/gr";
-import { MdLocalHospital } from "react-icons/md";
+import { MdLocalHospital, MdContactMail } from "react-icons/md";
 
 const Navbar3 = () => {
   return (
@@ -55,7 +55,7 @@ const Navbar3 = () => {
                 </NavDropdown.Item>
               </NavDropdown>
               <Nav.Link className="Navbar3__losli" href="contacto">
-                Contacto
+                <MdContactMail className="Navbar3__icon" /> Contacto
               </Nav.Link>
             </Nav>
             <div className="Navbar3__contenedor-tel">

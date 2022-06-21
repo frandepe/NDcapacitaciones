@@ -17,24 +17,24 @@ import img14 from "./img-aniversario-pellegrini-2.jpeg";
 import img15 from "./img-aniversario-pellegrini-3.jpeg";
 
 import "./NDcapacitaciones.scss";
-import { useEffect } from "react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-gsap.registerPlugin(ScrollTrigger);
+// import { useEffect } from "react";
+// import gsap from "gsap";
+// import { ScrollTrigger } from "gsap/ScrollTrigger";
+// gsap.registerPlugin(ScrollTrigger);
 
 const NDcapacitaciones = () => {
-  useEffect(() => {
-    gsap.from(".NDcapacitaciones__banner", {
-      scrollTrigger: {
-        trigger: ".NDcapacitaciones__banner",
-        start: "top 90%",
-        end: "bottom 60%",
-      },
-      duration: 2,
-      ease: "ease-in",
-      opacity: 0,
-    });
-  }, []);
+  // useEffect(() => {
+  //   gsap.from(".NDcapacitaciones__banner", {
+  //     scrollTrigger: {
+  //       trigger: ".NDcapacitaciones__banner",
+  //       start: "top 90%",
+  //       end: "bottom 60%",
+  //     },
+  //     duration: 2,
+  //     ease: "ease-in",
+  //     opacity: 0,
+  //   });
+  // }, []);
 
   return (
     <div>

@@ -11,7 +11,9 @@ import NDcapacitaciones from "../pages/NDcapacitaciones/NDcapacitaciones";
 import Programas from "../pages/Programas/Programas";
 import AdminCursos from "../pages/Admin/AdminCursos";
 import AdminCursosForm from "../pages/Admin/AdminCursosForm";
+import AdminAvalForm from "../pages/Admin/AdminAvalForm";
 import PrivateRoutes from "./private.routes";
+import AdminAval from "../pages/Admin/AdminAval";
 
 const Router = () => {
   return (
@@ -22,6 +24,9 @@ const Router = () => {
           <Route element={<PrivateRoutes />}>
             <Route path="backoffice/cursosForm" element={<AdminCursosForm />} />
             <Route path="backoffice/cursos" element={<AdminCursos />} />
+            <Route path="backoffice/aval" element={<AdminAval />} />
+            <Route path="backoffice/avalForm" element={<AdminAvalForm />} />
+            <Route path="backoffice" element={<Dashboard />} />
           </Route>
           <Route path="home" element={<Home />} />
           <Route path="contacto" element={<Contacto />} />
@@ -29,7 +34,6 @@ const Router = () => {
           <Route path="fechas" element={<Fechas />} />
           <Route path="FAQ" element={<FAQ />} />
           <Route path="programas" element={<Programas />} />
-          <Route path="backoffice" element={<Dashboard />} />
           <Route path="login" element={<Login />} />
           <Route path="*" element={<Navigate to="/home" />} />
         </Routes>

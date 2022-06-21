@@ -3,7 +3,7 @@ import { MdModeEdit } from "react-icons/md";
 import { IoMdTrash } from "react-icons/io";
 import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
-import { cursosAction } from "../../redux/actions/cursosdb";
+import { avalAction } from "../../redux/actions/avaldb";
 import showAlert from "../../shared/showAlert";
 import { privateDeleteRequest } from "../../services/privateApiServices";
 import { Table } from "react-bootstrap";
@@ -12,16 +12,16 @@ import { useNavigate } from "react-router-dom";
 import { Button } from "react-bootstrap";
 import "../../Components/shared.scss";
 
-const AdminCursos = () => {
+const AdminAval = () => {
   const dispatch = useDispatch();
   const [deleted, setDeleted] = useState(false);
-  const { cursosInfo, loading } = useSelector((store) => store.cursos);
-  console.log(cursosInfo);
+  const { avalInfo, loading } = useSelector((store) => store.aval);
+  console.log(avalInfo);
   const navigate = useNavigate();
 
   async function handleRemove(id) {
     try {
-      await privateDeleteRequest(`cursos/${id}`);
+      await privateDeleteRequest(`aval/${id}`);
       showAlert({ type: "success", title: "Eliminado correctamente" });
       setDeleted(true);
     } catch (error) {
@@ -33,7 +33,7 @@ const AdminCursos = () => {
   }
 
   useEffect(() => {
-    dispatch(cursosAction(cursosInfo));
+    dispatch(avalAction(avalInfo));
     if (deleted) {
       setDeleted(false);
     }
@@ -43,40 +43,27 @@ const AdminCursos = () => {
   return (
     <section className="container_section">
       <header className="news-header">
-        <h1>Listado de cursos</h1>
+        <h1>Imagenes Aval</h1>
       </header>
       <Table striped bordered hover>
         <thead>
           <tr>
-            <th>Fecha</th>
-            <th>Cuenta regresiva</th>
-            <th>Título</th>
-            <th>Localidad</th>
-            <th>Lugar</th>
-            <th>Horario</th>
-            <th>Descripción</th>
-            <th>Certificado</th>
+            <th>Imagen</th>
           </tr>
         </thead>
         <tbody>
           {!loading ? (
             <Spiner />
           ) : (
-            cursosInfo?.cursos?.map((element) => {
+            avalInfo?.aval?.map((element) => {
               return (
                 <tr key={element.id}>
-                  <td className="title">{element.fecha}</td>
-                  <td>{element.countdown}</td>
-                  <td>{element.titulo}</td>
-                  <td>{element.localidad}</td>
-                  <td>{element.lugar}</td>
-                  <td>{element.horario}</td>
-                  <td>{element.descripcion}</td>
-                  <td>{element.certificado ? "si" : "no"}</td>
-
+                  <td className="img-backoffice">
+                    <img src={element.imagen} alt="Imagen no encontrada" />
+                  </td>
                   <td className="options">
                     <Link
-                      to="/backoffice/cursosForm"
+                      to="/backoffice/avalForm"
                       state={{ element: element }}
                       className="change-button-edit"
                     >
@@ -100,12 +87,12 @@ const AdminCursos = () => {
       </Table>
       <div className="btn-nuevo">
         <Button onClick={() => navigate("/backoffice")}>Regresar</Button>
-        <Button onClick={() => navigate("/backoffice/cursosForm")}>
-          Nuevo curso +
+        <Button onClick={() => navigate("/backoffice/avalForm")}>
+          Nueva imagen +
         </Button>
       </div>
     </section>
   );
 };
 
-export default AdminCursos;
+export default AdminAval;

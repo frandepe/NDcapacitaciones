@@ -92,7 +92,6 @@ const Contacto = () => {
                     id="inlineFormCustomSelect"
                     name="tipo"
                   >
-                    <option value="Tipo">Tipo</option>
                     <option value="Persona">Persona</option>
                     <option value="Empresa">Empresa</option>
                   </Form.Select>
