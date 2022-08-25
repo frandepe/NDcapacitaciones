@@ -7,44 +7,18 @@ import {
   Button,
   Alert,
 } from "react-bootstrap";
+import { useSelector, useDispatch } from "react-redux";
+import { cursosAction } from "../../redux/actions/cursosdb";
 import emailjs from "emailjs-com";
 import "./Contacto.scss";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import img from "./comunicar.png";
 
 const Contacto = () => {
+  const dispatch = useDispatch();
+  const { cursosInfo } = useSelector((store) => store.cursos);
+
   const [resultado, setResultado] = useState("");
-
-
-  // const cart = [
-  //   ({
-  //     createdDate: "2022-06-12T22:29:11.431Z",
-  //     name: "oferta 3",
-  //     category: "special",
-  //     price: "1433",
-  //     imagen: "dsdd",
-  //     id: "62a668e9f98812ff5a2cb51a",
-  //     quantity: 3,
-  //   },
-  //   {
-  //     createdDate: "2022-06-12T16:48:07.183Z",
-  //     name: "queso rayado",
-  //     category: "quesos",
-  //     price: "54",
-  //     imagen: "dsdd",
-  //     id: "62a64adaca86140206d9f32d",
-  //     quantity: 3,
-  //   },
-  //   {
-  //     createdDate: "2022-06-11T16:08:41.776Z",
-  //     name: "queso azul",
-  //     price: "194",
-  //     imagen: "dsdd",
-  //     category: "quesos",
-  //     id: "62a4be2d9d36d3853996a184",
-  //     quantity: 2,
-  //   }),
-  // ];
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -67,6 +41,12 @@ const Contacto = () => {
       );
     e.target.reset();
   };
+
+  useEffect(() => {
+    dispatch(cursosAction(cursosInfo));
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [dispatch]);
 
   return (
     <div>
@@ -91,12 +71,7 @@ const Contacto = () => {
                   placeholder="name@example.com"
                 />
               </FloatingLabel>
-              <FloatingLabel
-                required
-                // controlId="floatingInput"
-                label="Apellido*"
-                className="mb-3"
-              >
+              <FloatingLabel required label="Apellido*" className="mb-3">
                 <Form.Control
                   type="text"
                   placeholder="name@example.com"
@@ -129,14 +104,33 @@ const Contacto = () => {
                 </Col>
               </FloatingLabel>
 
-              <FloatingLabel label="Asunto*" className="mb-3">
+              {/* <FloatingLabel label="Asunto*" className="mb-3">
                 <Form.Control
                   required
                   name="asunto"
                   as="textarea"
                   placeholder="Leave a comment here"
                 />
-              </FloatingLabel>
+              </FloatingLabel> */}
+              <Form.Select
+                className="me-sm-2"
+                id="inlineFormCustomSelect"
+                name="asunto"
+                style={{ marginBottom: "20px" }}
+              >
+                <option value="" disabled>
+                  Selecciona el curso al que desea asistir
+                </option>
+                {cursosInfo?.cursos
+                  ?.map((e) => {
+                    return (
+                      <option key={e.id} value={e.titulo + " " + e.fecha}>
+                        {e.titulo + " " + e.fecha}
+                      </option>
+                    );
+                  })
+                  .reverse()}
+              </Form.Select>
               <FloatingLabel controlId="floatingTextarea2" label="Mensaje*">
                 <Form.Control
                   required

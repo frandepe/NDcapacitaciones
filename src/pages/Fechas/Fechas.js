@@ -1,7 +1,7 @@
 // import InfoFecha from "../../Components/InfoFecha/InfoFecha";
 import "./Fechas.scss";
 import { useEffect } from "react";
-// import gsap from "gsap";
+import gsap from "gsap";
 // import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Countdown from "react-countdown";
 import { Button } from "react-bootstrap";
@@ -13,7 +13,6 @@ import Spiner from "../../shared/spiner";
 const Fechas = () => {
   const dispatch = useDispatch();
   const { cursosInfo, loading } = useSelector((store) => store.cursos);
-  console.log(cursosInfo);
 
   useEffect(() => {
     dispatch(cursosAction(cursosInfo));
@@ -40,29 +39,29 @@ const Fechas = () => {
     }
   };
 
-  // useEffect(() => {
-  //   gsap.from(".fechas__h3", {
-  //     scrollTrigger: {
-  //       trigger: ".fechas__h3",
-  //       start: "top 90%",
-  //       end: "bottom 60%",
-  //     },
-  //     duration: 2,
-  //     ease: "ease-in",
-  //     opacity: 0,
-  //   });
-  //   gsap.from(".fechas__info", {
-  //     scrollTrigger: {
-  //       trigger: ".fechas__info",
-  //       start: "top 90%",
-  //       end: "bottom 60%",
-  //     },
-  //     duration: 2,
-  //     x: -100,
-  //     ease: "ease-in",
-  //     opacity: 0,
-  //   });
-  // }, []);
+  useEffect(() => {
+    gsap.from(".fechas__h3", {
+      scrollTrigger: {
+        trigger: ".fechas__h3",
+        start: "top 90%",
+        end: "bottom 60%",
+      },
+      duration: 2,
+      ease: "ease-in",
+      opacity: 0,
+    });
+    gsap.from(".fechas__info", {
+      scrollTrigger: {
+        trigger: ".fechas__info",
+        start: "top 90%",
+        end: "bottom 60%",
+      },
+      duration: 2,
+      x: -100,
+      ease: "ease-in",
+      opacity: 0,
+    });
+  }, []);
   return (
     <div className="fechas__container">
       <h3 className="fechas__h3">
@@ -78,39 +77,41 @@ const Fechas = () => {
             {!loading ? (
               <Spiner />
             ) : (
-              cursosInfo?.cursos?.map((element) => {
-                const finishDate = new Date(element.countdown);
-                return (
-                  <div className="infofecha__container" key={element.id}>
-                    <h4>{element.titulo}</h4>
-                    <p>
-                      <span>Temario:</span> {element.descripcion}
-                    </p>
-                    <p>
-                      <span>Fecha:</span> {element.fecha}{" "}
-                      <Countdown date={finishDate} renderer={renderer} />
-                    </p>
-                    <p>
-                      <span>Localidad:</span> {element.localidad}
-                    </p>
-                    <p>
-                      <span>Lugar:</span> {element.lugar}
-                    </p>
-                    <p>
-                      <span>Horario:</span> {element.horario} hs
-                    </p>
-                    <b>
-                      {element.certificado &&
-                        "✓ Certificado nacional o internacional"}
-                    </b>
-                    {finishDate > new Date() && (
-                      <div className="infofecha__button">
-                        <Button href="contacto">Consultar</Button>
-                      </div>
-                    )}
-                  </div>
-                );
-              })
+              cursosInfo?.cursos
+                ?.map((element) => {
+                  const finishDate = new Date(element.countdown);
+                  return (
+                    <div className="infofecha__container" key={element.id}>
+                      <h4>{element.titulo}</h4>
+                      <p>
+                        <span>Temario:</span> {element.descripcion}
+                      </p>
+                      <p>
+                        <span>Fecha:</span> {element.fecha}{" "}
+                        <Countdown date={finishDate} renderer={renderer} />
+                      </p>
+                      <p>
+                        <span>Localidad:</span> {element.localidad}
+                      </p>
+                      <p>
+                        <span>Lugar:</span> {element.lugar}
+                      </p>
+                      <p>
+                        <span>Horario:</span> {element.horario} hs
+                      </p>
+                      <b>
+                        {element.certificado &&
+                          "✓ Certificado nacional o internacional"}
+                      </b>
+                      {finishDate > new Date() && (
+                        <div className="infofecha__button">
+                          <Button href="contacto">Consultar</Button>
+                        </div>
+                      )}
+                    </div>
+                  );
+                })
+                .reverse()
             )}
           </div>
         </div>
