@@ -5,6 +5,9 @@ import imgEmpresa from "./empresaIcon.png";
 // import gsap from "gsap";
 // import { ScrollTrigger } from "gsap/ScrollTrigger";
 import DataCards from "../../Components/Cards/DataCards";
+import { Row } from "react-bootstrap";
+import BannerHeader from "../../Components/BannerHeader/BannerHeader";
+import imgCurso2 from "./imgCurso2.jpg";
 // gsap.registerPlugin(ScrollTrigger);
 
 const Programas = () => {
@@ -41,13 +44,13 @@ const Programas = () => {
           instituciones internacionales.
         </p>
       </div>
-      <div className="programas__conth2">
-        <h2 className="programas__h2">
-          El saber que hacer, permite actuar con seguridad… permite salvar una
-          vida
-        </h2>
-      </div>
-
+      <Row className="row-margin-0">
+        <BannerHeader
+          title="Programa"
+          description="El saber que hacer, permite actuar con seguridad… permite salvar una vida"
+          src={imgCurso2}
+        />
+      </Row>
       <DataCards />
       <div className="programas__contenedorInfo">
         <div className="programas__info">

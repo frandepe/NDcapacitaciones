@@ -1,20 +1,4 @@
 .programas {
-  &__conth2 {
-    width: 100%;
-    background: url(imgCurso2.jpg);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center;
-    padding: 5%;
-    h2 {
-      transition: 1s;
-      color: white;
-      text-shadow: 3px 3px 2px rgba(0, 0, 0, 0.6);
-      text-align: center;
-    }
-  }
-
   &__divp {
     margin-top: 2%;
     margin-bottom: 2%;
@@ -52,6 +36,7 @@
     &--column {
       display: flex;
       flex-direction: column;
+
       margin: 20%;
       img {
         width: 100px;
@@ -63,7 +48,7 @@
 @media (max-width: 600px) {
   .programas__info {
     &--flex {
-      display: block;
+      flex-direction: column;
     }
     &--column {
       img {

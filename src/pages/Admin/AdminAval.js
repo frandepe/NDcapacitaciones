@@ -16,7 +16,6 @@ const AdminAval = () => {
   const dispatch = useDispatch();
   const [deleted, setDeleted] = useState(false);
   const { avalInfo, loading } = useSelector((store) => store.aval);
-  console.log(avalInfo);
   const navigate = useNavigate();
 
   async function handleRemove(id) {

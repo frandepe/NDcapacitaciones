@@ -13,3 +13,9 @@
   margin-top: 5%;
   margin-bottom: 5%;
 }
+
+.leyesb::before {
+  content: "⌟";
+  font-weight: bold;
+  color: var(--cuarto);
+}

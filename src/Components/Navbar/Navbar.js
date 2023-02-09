@@ -1,4 +1,4 @@
-import logo from "./Logo.png";
+import logo from "./logo2.png";
 import "./Navbar.scss";
 import { Navbar, Container, NavDropdown, Nav } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.css";
@@ -11,12 +11,12 @@ import { MdLocalHospital, MdContactMail } from "react-icons/md";
 const Navbar3 = () => {
   return (
     <div className="nav-cont">
-      <Navbar bg="light" expand="lg" sticky="top">
+      <Navbar bg="light" expand="xl" sticky="top">
         <Container fluid>
-          <Navbar.Brand href="#home">
+          <Navbar.Brand href="home">
             <img
               src={logo}
-              width="340"
+              width="300"
               height="auto"
               className="d-inline-block align-top img-logotipo"
               alt={"logo"}
@@ -50,8 +50,7 @@ const Navbar3 = () => {
                 </NavDropdown.Item>
                 <NavDropdown.Divider />
                 <NavDropdown.Item href="info-nd-capacitaciones">
-                  <MdLocalHospital className="Navbar3__icon" /> ND
-                  Capacitaciones Info
+                  <MdLocalHospital className="Navbar3__icon" /> Noticias
                 </NavDropdown.Item>
               </NavDropdown>
               <Nav.Link className="Navbar3__losli" href="contacto">

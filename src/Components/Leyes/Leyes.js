@@ -1,25 +1,25 @@
 import { Container, Row, Col } from "react-bootstrap";
 import "./Leyes.scss";
-import { useEffect } from "react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+// import { useEffect } from "react";
+// import gsap from "gsap";
+// import { ScrollTrigger } from "gsap/ScrollTrigger";
 import CustomReactPlayer from "../VideosND/VideoPlayer/CustomVideoPlayer";
-gsap.registerPlugin(ScrollTrigger);
+// gsap.registerPlugin(ScrollTrigger);
 
 const Leyes = () => {
-  useEffect(() => {
-    gsap.from(".leyes__container", {
-      scrollTrigger: {
-        trigger: ".leyes__container",
-        start: "top 90%",
-        end: "bottom 60%",
-      },
-      duration: 2,
-      ease: "ease-in",
-      y: 100,
-      opacity: 0,
-    });
-  }, []);
+  // useEffect(() => {
+  //   gsap.from(".leyes__container", {
+  //     scrollTrigger: {
+  //       trigger: ".leyes__container",
+  //       start: "top 90%",
+  //       end: "bottom 60%",
+  //     },
+  //     duration: 2,
+  //     ease: "ease-in",
+  //     y: 100,
+  //     opacity: 0,
+  //   });
+  // }, []);
   return (
     <div>
       <Container className="leyes__container">

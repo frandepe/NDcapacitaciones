@@ -1,4 +1,12 @@
 .NDcapacitaciones {
+  &__noticias {
+    margin: 0 0 10px 24px;
+  }
+  &__noticias::before {
+    content: "⌟";
+    font-weight: bold;
+    color: var(--cuarto);
+  }
   &__banner {
     position: relative;
     z-index: 1;

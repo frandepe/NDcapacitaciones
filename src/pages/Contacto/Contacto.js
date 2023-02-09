@@ -32,7 +32,6 @@ const Contacto = () => {
       )
       .then(
         (result) => {
-          console.log(result.text);
           setResultado(result.text);
         },
         (error) => {

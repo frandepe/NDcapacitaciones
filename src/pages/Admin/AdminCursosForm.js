@@ -12,8 +12,6 @@ import "../../Components/shared.scss";
 const AdminCursosForm = (patchData) => {
   const location = useLocation();
 
-  console.log(patchData, " patchData");
-  console.log(location, " useLocation Hook");
   // const data = location.state?.data;
 
   const navigate = useNavigate();
@@ -26,7 +24,6 @@ const AdminCursosForm = (patchData) => {
       .required("El campo es requerido")
       .max(100, "No puede ingresar más de 100 caracteres"),
   });
-  console.log("PatchData:", patchData);
 
   return (
     <div className="container_abm">
@@ -49,20 +46,19 @@ const AdminCursosForm = (patchData) => {
             setStatusForm(true);
             try {
               if (location?.state?.element?.id) {
-                const putRes = await privatePutRequest({
+                await privatePutRequest({
                   url: `cursos/${location?.state?.element?.id}`,
                   putData: { ...formData },
                 });
-                console.log(putRes);
 
                 showAlert({ type: "success", title: "Editado correctamente" });
                 navigate("/backoffice/cursos");
                 return;
               }
-              const response = await privatePostRequest("cursos", {
+              await privatePostRequest("cursos", {
                 ...formData,
               });
-              console.log(response);
+
               // if (!response?.data?.status === 200)
               //   throw new Error("Algo falló");
               showAlert({

@@ -3,7 +3,11 @@
     padding: 3%;
     font-size: 1.7em;
   }
-
+  &__sobremi::before {
+    content: "⌟";
+    font-weight: bold;
+    color: var(--cuarto);
+  }
   &__containerIntroduction {
     margin-top: 5%;
   }

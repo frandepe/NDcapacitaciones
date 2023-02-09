@@ -16,7 +16,7 @@ const AdminCursos = () => {
   const dispatch = useDispatch();
   const [deleted, setDeleted] = useState(false);
   const { cursosInfo, loading } = useSelector((store) => store.cursos);
-  console.log(cursosInfo);
+
   const navigate = useNavigate();
 
   async function handleRemove(id) {

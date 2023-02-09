@@ -1,14 +1,12 @@
-// import InfoFecha from "../../Components/InfoFecha/InfoFecha";
 import "./Fechas.scss";
 import { useEffect } from "react";
-import gsap from "gsap";
-// import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Countdown from "react-countdown";
-import { Button } from "react-bootstrap";
+import { Button, Row } from "react-bootstrap";
 import { useSelector, useDispatch } from "react-redux";
 import { cursosAction } from "../../redux/actions/cursosdb";
 import Spiner from "../../shared/spiner";
-// gsap.registerPlugin(ScrollTrigger);
+import BannerHeader from "../../Components/BannerHeader/BannerHeader";
+import imgCursoFecha from "./imgCursoFecha.jpg";
 
 const Fechas = () => {
   const dispatch = useDispatch();
@@ -39,36 +37,41 @@ const Fechas = () => {
     }
   };
 
-  useEffect(() => {
-    gsap.from(".fechas__h3", {
-      scrollTrigger: {
-        trigger: ".fechas__h3",
-        start: "top 90%",
-        end: "bottom 60%",
-      },
-      duration: 2,
-      ease: "ease-in",
-      opacity: 0,
-    });
-    gsap.from(".fechas__info", {
-      scrollTrigger: {
-        trigger: ".fechas__info",
-        start: "top 90%",
-        end: "bottom 60%",
-      },
-      duration: 2,
-      x: -100,
-      ease: "ease-in",
-      opacity: 0,
-    });
-  }, []);
+  // useEffect(() => {
+  //   gsap.from(".fechas__h3", {
+  //     scrollTrigger: {
+  //       trigger: ".fechas__h3",
+  //       start: "top 90%",
+  //       end: "bottom 60%",
+  //     },
+  //     duration: 2,
+  //     ease: "ease-in",
+  //     opacity: 0,
+  //   });
+  //   gsap.from(".fechas__info", {
+  //     scrollTrigger: {
+  //       trigger: ".fechas__info",
+  //       start: "top 90%",
+  //       end: "bottom 60%",
+  //     },
+  //     duration: 2,
+  //     x: -100,
+  //     ease: "ease-in",
+  //     opacity: 0,
+  //   });
+  // }, []);
   return (
     <div className="fechas__container">
-      <h3 className="fechas__h3">
-        Brindamos diferentes cursos de capacitaciones tanto para empresas como
-        para nuestra comunidad. Puede tomar los cursos cualquier persona que
-        desee ampliar sus conocimientos en Salud.
-      </h3>
+      <Row className="row-margin-0">
+        <BannerHeader
+          title="Próximas fechas"
+          description="Brindamos diferentes cursos de capacitaciones tanto para empresas como
+          para nuestra comunidad. Puede tomar los cursos cualquier persona que
+          desee ampliar sus conocimientos en Salud"
+          src={imgCursoFecha}
+        />
+      </Row>
+
       <div className="fechas__info">
         <div className="fechas__width">
           <h3>Próximos cursos</h3>

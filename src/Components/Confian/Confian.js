@@ -18,7 +18,6 @@ import Spiner from "../../shared/spiner";
 const Confian = () => {
   const dispatch = useDispatch();
   const { avalInfo, loading } = useSelector((store) => store.aval);
-  console.log(avalInfo);
 
   useEffect(() => {
     dispatch(avalAction(avalInfo));

@@ -1,7 +1,25 @@
 .NDimagenes {
+  &__fecha {
+    color: rgba(46, 46, 46, 0.5);
+    svg {
+      margin-right: 5px;
+      transform: translateY(-3px);
+    }
+  }
+  &__link {
+    font-weight: bold;
+    text-decoration: none;
+    color: rgba(235, 235, 235, 0.8);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+    cursor: pointer;
+  }
+  &__link:hover {
+    color: rgba(235, 235, 235, 0.5);
+  }
   &__container {
     p {
       color: white;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
     }
   }
   &__img {
@@ -10,6 +28,28 @@
     img {
       width: 300px;
       height: 250px;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .NDimagenes {
+    &__Col3 {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px !important;
+      width: 100vw !important;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .NDimagenes {
+    &__Col12 {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px !important;
+      width: 100vw !important;
     }
   }
 }

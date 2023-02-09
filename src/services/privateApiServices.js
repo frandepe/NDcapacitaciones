@@ -73,7 +73,6 @@ export const privateDeleteRequest = async (route) => {
 export const getDataMethodPrivate = async (route) => {
   try {
     const result = await axios.get(`${BASE_URL}/${route}`, config);
-    console.log(result);
     return result;
   } catch (error) {
     console.error(error);

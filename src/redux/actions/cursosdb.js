@@ -28,7 +28,7 @@ export const cursosAction = () => async (dispatch) => {
   try {
     const response = await getDataMethodPrivate("cursos");
     const data = response?.data;
-    console.log(data);
+
     dispatch({
       type: CURSOS,
       payload: { cursosInfo: data },

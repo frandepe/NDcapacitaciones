@@ -28,7 +28,6 @@ export const avalAction = () => async (dispatch) => {
   try {
     const response = await getDataMethodPrivate("aval");
     const data = response?.data;
-    console.log(data);
     dispatch({
       type: AVAL,
       payload: { avalInfo: data },

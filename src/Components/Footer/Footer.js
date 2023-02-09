@@ -35,9 +35,7 @@ const Footer = () => {
           <Col>© FMD | Todos los derechos reservados 2022</Col>
           <Col>
             Desarrollo y diseño por{" "}
-            <a href="https://www.linkedin.com/in/franco-de-paulo-13509b186/">
-              FMD
-            </a>
+            <a href="https://www.frandepaulo.com/">FMD</a>
           </Col>
         </Row>
       </Container>

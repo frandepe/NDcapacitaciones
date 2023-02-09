@@ -12,8 +12,6 @@ import "../../Components/shared.scss";
 
 const AdminAvalForm = (patchData) => {
   const location = useLocation();
-  console.log(patchData, " patchData");
-  console.log(location, " useLocation Hook");
   const navigate = useNavigate();
   const [statusForm, setStatusForm] = useState(false);
   const [previewImage, setPreviewImage] = useState(
@@ -54,20 +52,19 @@ const AdminAvalForm = (patchData) => {
             setStatusForm(true);
             try {
               if (location?.state?.element?.id) {
-                const putRes = await privatePutRequest({
+                await privatePutRequest({
                   url: `aval/${location?.state?.element?.id}`,
                   putData: { imagen },
                 });
-                console.log(putRes);
 
                 showAlert({ type: "success", title: "Editado correctamente" });
                 navigate("/backoffice/aval");
                 return;
               }
-              const response = await privatePostRequest("aval", {
+              await privatePostRequest("aval", {
                 imagen,
               });
-              console.log(response);
+
               // if (!response?.data?.status === 200)
               //   throw new Error("Algo falló");
               showAlert({
