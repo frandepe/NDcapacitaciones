@@ -3,13 +3,16 @@ import { useEffect } from "react";
 import Countdown from "react-countdown";
 import { Button, Row } from "react-bootstrap";
 import { useSelector, useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
 import { cursosAction } from "../../redux/actions/cursosdb";
 import Spiner from "../../shared/spiner";
 import BannerHeader from "../../Components/BannerHeader/BannerHeader";
 import imgCursoFecha from "./imgCursoFecha.jpg";
+import logoMP from "./logoMP.png";
 
 const Fechas = () => {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const { cursosInfo, loading } = useSelector((store) => store.cursos);
 
   useEffect(() => {
@@ -70,6 +73,12 @@ const Fechas = () => {
           desee ampliar sus conocimientos en Salud"
           src={imgCursoFecha}
         />
+      </Row>
+      <Row className="fechas__titlepago" onClick={() => navigate("/pagos")}>
+        <h3>
+          Ahora podés pagár los cursos directamente desde{" "}
+          <img src={logoMP} alt="Logo de mercado pago" />
+        </h3>{" "}
       </Row>
 
       <div className="fechas__info">

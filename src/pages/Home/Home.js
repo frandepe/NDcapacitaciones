@@ -4,6 +4,7 @@ import "./Home.scss";
 import Leyes from "../../Components/Leyes/Leyes";
 import Confian from "../../Components/Confian/Confian";
 import NecesidadDeCapacitar from "../../Components/NecesidadDeCapacitar/NecesidadDeCapacitar";
+import Testimonial from "../../Components/Testimonial/Testimonial";
 // import { useEffect } from "react";
 // import gsap from "gsap";
 // import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -57,6 +58,7 @@ const Home = () => {
       </Container>
       <Leyes />
       <NecesidadDeCapacitar />
+      <Testimonial />
       <div>
         <Stack
           href="fechas"

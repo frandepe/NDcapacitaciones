@@ -1,50 +1,34 @@
-import NDimagenes from "../../Components/NDimagenes/NDimagenes";
+import CardNoticias from "../../Components/CardNoticias/CardNoticias";
 import VideosND from "../../Components/VideosND/VideosND";
-import img1 from "./img1.jpg";
+import { Row, Col } from "react-bootstrap";
+import Slider from "react-slick";
 import img2 from "./rcpcancha2.jpg";
-import img3 from "./rcpcancha3.jpg";
 import img4 from "./cap1.jpeg";
-import img5 from "./cap2.jpeg";
-import img6 from "./cap3.jpeg";
-import img7 from "./capacitacion1.jpg";
-import img8 from "./capacitacion2.jpg";
 import img9 from "./capacitacion3.jpg";
 import img10 from "./img-patrulla-rural-1.jpeg";
-import img11 from "./img-patrulla-rural-2.jpeg";
-import img12 from "./img-patrulla-rural-3.jpg";
-import img13 from "./img-aniversario-pellegrini-1.jpeg";
 import img14 from "./img-aniversario-pellegrini-2.jpeg";
-import img15 from "./img-aniversario-pellegrini-3.jpeg";
-import img16 from "./edespecial1.jpg";
 import img17 from "./edespecial2.jpg";
-import img18 from "./edespecial3.jpg";
 import img19 from "./new1cap.png";
-import img20 from "./new2cap.png";
-import img21 from "./new3cap.png";
-import img22 from "./olimpic1.jpg";
 import img23 from "./olimpic2.jpg";
-import img24 from "./olimpic3.jpg";
-
+import img26 from "./moto2.jpg";
+import img28 from "./jardin3.jpeg";
 import "./NDcapacitaciones.scss";
-// import { useEffect } from "react";
-// import gsap from "gsap";
-// import { ScrollTrigger } from "gsap/ScrollTrigger";
-// gsap.registerPlugin(ScrollTrigger);
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const NDcapacitaciones = () => {
-  // useEffect(() => {
-  //   gsap.from(".NDcapacitaciones__banner", {
-  //     scrollTrigger: {
-  //       trigger: ".NDcapacitaciones__banner",
-  //       start: "top 90%",
-  //       end: "bottom 60%",
-  //     },
-  //     duration: 2,
-  //     ease: "ease-in",
-  //     opacity: 0,
-  //   });
-  // }, []);
-
+  const settings = {
+    dots: true,
+    className: "center",
+    centerMode: true,
+    infinite: true,
+    centerPadding: "60px",
+    slidesToShow: 3,
+    autoplay: true,
+    speed: 1000,
+    autoplaySpeed: 3000,
+    cssEase: "linear",
+  };
   return (
     <div>
       <div className="NDcapacitaciones__banner">
@@ -65,86 +49,92 @@ const NDcapacitaciones = () => {
       </div>
       <VideosND />
 
-      <h3 className="NDcapacitaciones__noticias">Noticias</h3>
-      <NDimagenes
-        fecha="4 octubre, 2022"
-        link="https://www.instagram.com/p/CjQHe-5ODYl/"
-        color="#da2f2f"
-        descripcion="Realizamos en Mulchen una capacitación sobre maniobras de reanimación cardiopulmonar (RCP) para todos los colaboradores de la empresa."
-        imagen1={img19}
-        imagen2={img20}
-        imagen3={img21}
-      />
-      <NDimagenes
-        fecha="20 junio, 2022"
-        link="https://www.trenquelauquen.gov.ar/noticias/alumnos-as-docentes-y-familias-de-las-escuelas-n501-y-502-tuvieron-un-taller-de-primeros-auxilios-con-tecnicas-de-rcp/"
-        color="#dac92f"
-        descripcion="Dentro del Programa de Capacitaciones y Prevencion de Riesgos, la Coordinacion de Defensa Civil Municipal junto a integrantes del grupo de Voluntarios de la defensa civil Municipal, brindaron un taller en la tematica de Primeros Auxilios con tecnicas de RCP y uso del DEA (Desfribilador Externo Automatico) en las instalaciones de la Escuela de Educacion Especial Nro 501.  La misma estuvo dirigida a Docentes, Famiiares y Acompañantes Terapeuticos de los Alumnos de las Instituciones 501 y 502.-  En un marco de participacion conjunta, se trabajo en las tematicas mas puntuales sobre problematicas de Alumnos, donde los padres aportaron tambien mucha de sus experiencias que hicieron que la jornada tenga el exito del aprendizaje mutuo"
-        imagen1={img16}
-        imagen2={img17}
-        imagen3={img18}
-      />
+      <h3 className="NDcapacitaciones__noticias">Últimas noticias</h3>
+      <Row>
+        <Col sm="6">
+          <CardNoticias
+            height="400px"
+            description="Defensa civil capacitó en primeros auxilios con técnicas de rcp al personal que se desempeña en los jardines maternales municipales de la ciudad cabecera"
+            fecha="10 febrero, 2023"
+            link="https://www.trenquelauquen.gov.ar/noticias/defensa-civil-capacito-en-primeros-auxilios-con-tecnicas-de-rcp-al-personal-que-se-desempena-en-los-jardines-maternales-municipales-de-la-ciudad-cabecera/"
+            src={img28}
+          />
+        </Col>
+        <Col sm="3">
+          <Row style={{ marginBottom: "2px" }}>
+            <CardNoticias
+              description="Se capacito en Socorrismo Urbano con RCP y uso del DEA a personal de la empresa IBERCOM-MULTICOM Fibra Optica de la Seccional Trenque Lauquen"
+              fecha="14 febrero, 2023"
+              src={img26}
+              height="199px"
+            />
+          </Row>
+          <Row style={{ marginTop: "2px" }}>
+            <CardNoticias
+              description="Realizamos en Mulchen una capacitación sobre maniobras de reanimación cardiopulmonar (RCP) para todos los colaboradores de la empresa"
+              fecha="4 octubre, 2022"
+              link="https://www.instagram.com/p/CjQHe-5ODYl/"
+              src={img19}
+              height="199px"
+            />
+          </Row>
+        </Col>
+        <Col sm="3">
+          <Row style={{ marginBottom: "2px" }}>
+            <CardNoticias
+              description="Dentro del Programa de Capacitaciones y Prevencion de Riesgos, la Coordinacion de Defensa Civil Municipal junto a integrantes del grupo de..."
+              fecha="20 junio, 2022"
+              link="https://www.trenquelauquen.gov.ar/noticias/alumnos-as-docentes-y-familias-de-las-escuelas-n501-y-502-tuvieron-un-taller-de-primeros-auxilios-con-tecnicas-de-rcp/"
+              src={img17}
+              height="199px"
+            />
+          </Row>
+          <Row style={{ marginTop: "2px" }}>
+            <CardNoticias
+              description="La Coordinación de Defensa Civil Municipal, a cargo de Nicolás De Paulo, brindó una capacitación sobre Primeros Auxilios con técnicas de Reanimación Cardiopulmonar..."
+              fecha="23 abril, 2022"
+              link="https://laopinion.com.ar/taller-de-rcp-y-primeros-auxilios-para-personal-de-patrulla-rural/"
+              src={img10}
+              height="199px"
+            />
+          </Row>
+        </Col>
+      </Row>
 
-      <NDimagenes
-        fecha="23 abril, 2022"
-        color="#64d0c3"
-        link="https://laopinion.com.ar/taller-de-rcp-y-primeros-auxilios-para-personal-de-patrulla-rural/"
-        descripcion="La Coordinación de Defensa Civil Municipal, a cargo de Nicolás De Paulo, brindó una capacitación sobre Primeros Auxilios con técnicas de Reanimación Cardiopulmonar (RCP) y uso del Desfibrilador Externo Automático (DEA) a personal de la Patrulla Rural de Trenque Lauquen."
-        imagen1={img10}
-        imagen2={img11}
-        imagen3={img12}
-      />
-      <NDimagenes
-        fecha="13 abril, 2022"
-        link="https://www.lacamaradetrenque.com.ar/novedades/se-realizo-una-capacitacion-en-primeros-auxilios-y-rcp-en-la-camara-de-comercio-de-trenque-lauquen"
-        color="#da2f2f"
-        descripcion="El taller denominado “Socorros urbanos con RCP y DEA” estuvo a cargo de la empresa ND Capacitaciones, mediante el instructor, Nicolás De Paulo. Alumno: “nos gustó mucho, fue simple, didáctica y práctica. Aprendimos qué hay hacer y qué no hay que hacer en una emergencia. Estamos con el compromiso de seguir formándonos en distintas áreas para ser mejores en lo que hacemos”. "
-        imagen1={img4}
-        imagen2={img5}
-        imagen3={img6}
-      />
-
-      <NDimagenes
-        fecha="2 abril, 2022"
-        color="#dac92f"
-        link="https://www.laregionweb.info/single-post/la-peatonal-123-fue-un-%C3%A9xito-en-pellegrini"
-        descripcion="El Municipio a través del área de Cultura, realizó con total éxito la Peatonal 123, con la Fiesta Regional de la Galleta de Campo. Una multitud de espectadores, entre jóvenes y adultos se dieron cita en la Peatonal, que se vio llena de color, alegría y estuvo vestida de distintos stands."
-        imagen1={img13}
-        imagen2={img14}
-        imagen3={img15}
-      />
-      <NDimagenes
-        fecha="6 marzo, 2022"
-        link="https://deportelauquen.com.ar/charla-sobre-primeros-auxilios-tecnicas-de-rcp-y-utilizacion-del-dea-en-gtm-sport/"
-        color="#64d0c3"
-        descripcion="Charla sobre Primeros Auxilios, Técnicas de RCP y utilización del DEA en GTM SPORT, La misma estuvo a cargo de Nicolas De Paulo, Coordinador de Defensa Civil del Municipio de Trenque Lauquen.
-         Esta importante jornada de capacitación fue una actividad organizada por la Asociación de Taekwondo de Trenque Lauquen."
-        imagen1={img22}
-        imagen2={img23}
-        imagen3={img24}
-      />
-      <NDimagenes
-        color="#da2f2f"
-        fecha="2 febrero, 2022"
-        link="https://www.trenquelauquen.gov.ar/noticias/defensa-civil-dicto-un-taller-de-rcp-y-primeros-auxilios-a-un-grupo-de-jovenes-del-ateneo-de-la-sociedad-rural/"
-        descripcion="Capacitación para jóvenes de entre 12 y 18 años de
-        la ciudad de Trenque Lauquen y Treinta de Agosto de Agosto
-        con la presencia de dirigentes ruralistas del director de la
-        Escuela Agropecuaria “Manuel Belgrano”, Javier Olazábal, y la
-        titular de la oficina de la Juventud del Municipio, Marta Bathis."
-        imagen1={img1}
-        imagen2={img2}
-        imagen3={img3}
-      />
-      <NDimagenes
-        color="#dac92f"
-        fecha="21 enero, 2022"
-        link="https://www.trenquelauquen.gov.ar/noticias/taller-de-primeros-auxilios-y-rcp-en-los-cursos-de-verano-que-ofrecen-el-municipio-y-otras-instituciones/"
-        descripcion="ND Capacitaciones: “iniciamos un proyecto anual de talleres de primeros auxilios y RCP”...  “comenzamos con la actividad de verano. Ya ofrecimos las charlas en las escuelas de verano: CEC y escuela nº 46 y ahora iniciamos en los talleres de cultura”... “hacemos algo sencillo y ameno para que todos se lleven una idea de lo que puedan hacer”."
-        imagen1={img7}
-        imagen2={img8}
-        imagen3={img9}
-      />
+      <Row className="NDcapacitaciones__slider">
+        <Slider {...settings}>
+          <CardNoticias
+            description="El taller denominado “Socorros urbanos con RCP y DEA” estuvo a cargo de la empresa ND Capacitaciones, mediante el instructor, Nicolás De Paulo. Alumno: “nos gustó mucho, fue..."
+            fecha="13 abril, 2022"
+            link="https://www.lacamaradetrenque.com.ar/novedades/se-realizo-una-capacitacion-en-primeros-auxilios-y-rcp-en-la-camara-de-comercio-de-trenque-lauquen"
+            src={img4}
+          />
+          <CardNoticias
+            description="El Municipio a través del área de Cultura, realizó con total éxito la Peatonal 123, con la Fiesta Regional de la Galleta de Campo. Una multitud de espectadores..."
+            fecha="2 abril, 2022"
+            link="https://www.laregionweb.info/single-post/la-peatonal-123-fue-un-%C3%A9xito-en-pellegrini"
+            src={img14}
+          />
+          <CardNoticias
+            description="Esta importante jornada de capacitación fue una actividad organizada por la Asociación de Taekwondo de Trenque Lauquen"
+            fecha="6 marzo, 2022"
+            link="https://deportelauquen.com.ar/charla-sobre-primeros-auxilios-tecnicas-de-rcp-y-utilizacion-del-dea-en-gtm-sport/"
+            src={img23}
+          />
+          <CardNoticias
+            description="Capacitación para jóvenes de entre 12 y 18 años de la ciudad de Trenque Lauquen y Treinta de Agosto"
+            fecha="2 febrero, 2022"
+            link="https://www.trenquelauquen.gov.ar/noticias/defensa-civil-dicto-un-taller-de-rcp-y-primeros-auxilios-a-un-grupo-de-jovenes-del-ateneo-de-la-sociedad-rural/"
+            src={img2}
+          />
+          <CardNoticias
+            description="Iniciamos un proyecto anual de talleres de primeros auxilios y RCP, comenzamos con la actividad de verano. Ya ofrecimos las charlas en las escuelas de verano: CEC y..."
+            fecha="21 enero, 2022"
+            link="https://www.trenquelauquen.gov.ar/noticias/taller-de-primeros-auxilios-y-rcp-en-los-cursos-de-verano-que-ofrecen-el-municipio-y-otras-instituciones/"
+            src={img9}
+          />
+        </Slider>
+      </Row>
     </div>
   );
 };

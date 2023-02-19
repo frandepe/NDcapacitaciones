@@ -1,12 +1,13 @@
 import axios from "axios";
 
-const BASE_URL = process.env.REACT_APP_BASE_URL;
-// const BASE_URL = "http://localhost:3100/api";
+// const BASE_URL = process.env.REACT_APP_BASE_URL;
+const BASE_URL = "http://localhost:3100/api";
 
 const tokenn = window.localStorage.getItem("token");
 const config = {
   headers: {
     Authorization: `Bearer ${tokenn}`,
+    "x-access-token": `${tokenn}`,
     "Access-Control-Expose-Headers": "Access-Control-*",
     "Access-Control-Allow-Headers":
       "Access-Control-*, Origin, X-Requested-With, Content-Type, Accept",
@@ -76,5 +77,14 @@ export const getDataMethodPrivate = async (route) => {
     return result;
   } catch (error) {
     console.error(error);
+  }
+};
+
+export const generatePaymentMP = async () => {
+  try {
+    const result = await axios.post(`${BASE_URL}/payment`, {});
+    return result.data.init_point;
+  } catch (error) {
+    console.log(error);
   }
 };

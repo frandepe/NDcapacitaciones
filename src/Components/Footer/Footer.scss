@@ -21,4 +21,10 @@
       text-decoration: none;
     }
   }
+  &__logomp img {
+    width: 150px;
+    filter: grayscale(100%) invert(100%);
+    -webkit-filter: grayscale(100%) invert(100%);
+    -moz-filter: grayscale(100%) invert(100%);
+  }
 }

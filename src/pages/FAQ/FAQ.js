@@ -14,7 +14,7 @@ const FAQ = () => {
         <Acordion
           num="2"
           pregunta="¿Cúales son las formas de pago?"
-          respuesta="El pago de la capacitacion se puede realizar mediante las siguientes formas: Cuenta DNI, Mercado de Pago, Transferencia Bancaria"
+          respuesta="El pago de la capacitacion se puede realizar mediante las siguientes formas: Cuenta DNI, Mercado de Pago (desde esta web), Transferencia Bancaria"
         />
         <Acordion
           num="3"

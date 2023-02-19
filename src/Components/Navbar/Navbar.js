@@ -1,4 +1,4 @@
-import logo from "./logo2.png";
+import logo from "./logo4.png";
 import "./Navbar.scss";
 import { Navbar, Container, NavDropdown, Nav } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.css";
@@ -13,7 +13,7 @@ const Navbar3 = () => {
     <div className="nav-cont">
       <Navbar bg="light" expand="xl" sticky="top">
         <Container fluid>
-          <Navbar.Brand href="home">
+          <Navbar.Brand href="/">
             <img
               src={logo}
               width="300"
@@ -29,7 +29,7 @@ const Navbar3 = () => {
               style={{ maxHeight: "500px" }}
               navbarScroll
             >
-              <Nav.Link className="Navbar3__losli" href="home">
+              <Nav.Link className="Navbar3__losli" href="/">
                 <AiFillHome className="Navbar3__icon" /> Inicio
               </Nav.Link>
               <Nav.Link className="Navbar3__losli" href="FAQ">

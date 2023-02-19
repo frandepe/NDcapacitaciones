@@ -7,6 +7,12 @@
     font-weight: bold;
     color: var(--cuarto);
   }
+  &__slider {
+    margin-top: 50px !important;
+    margin-bottom: 50px;
+    border: 2px solid var(--terciario) !important;
+    background-color: var(--terciario);
+  }
   &__banner {
     position: relative;
     z-index: 1;

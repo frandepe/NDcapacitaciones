@@ -14,6 +14,7 @@ import AdminCursosForm from "../pages/Admin/AdminCursosForm";
 import AdminAvalForm from "../pages/Admin/AdminAvalForm";
 import PrivateRoutes from "./private.routes";
 import AdminAval from "../pages/Admin/AdminAval";
+import { MercadoPago } from "../pages/MercadoPago/MercadoPago";
 
 const Router = () => {
   return (
@@ -28,14 +29,15 @@ const Router = () => {
             <Route path="backoffice/avalForm" element={<AdminAvalForm />} />
             <Route path="backoffice" element={<Dashboard />} />
           </Route>
-          <Route path="home" element={<Home />} />
+          <Route path="/" element={<Home />} />
           <Route path="contacto" element={<Contacto />} />
           <Route path="info-nd-capacitaciones" element={<NDcapacitaciones />} />
           <Route path="fechas" element={<Fechas />} />
           <Route path="FAQ" element={<FAQ />} />
           <Route path="programas" element={<Programas />} />
+          <Route path="pagos" element={<MercadoPago />} />
           <Route path="login" element={<Login />} />
-          <Route path="*" element={<Navigate to="/home" />} />
+          {/* <Route path="*" element={<Navigate to="/" />} /> */}
         </Routes>
         <Footer />
       </BrowserRouter>

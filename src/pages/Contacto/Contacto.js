@@ -13,6 +13,8 @@ import emailjs from "emailjs-com";
 import "./Contacto.scss";
 import { useState, useEffect } from "react";
 import img from "./comunicar.png";
+import contactImg from "./contactimg2.jpg";
+import BannerHeader from "../../Components/BannerHeader/BannerHeader";
 
 const Contacto = () => {
   const dispatch = useDispatch();
@@ -49,14 +51,12 @@ const Contacto = () => {
 
   return (
     <div>
-      <div className="contacto__titulo">
-        <h3>Contactanos</h3>
-        <p>
-          Escribinos para poder brindarte una información personalizada sobre
-          nuestras capacitaciones
-        </p>
-        <p>También estamos abiertos a cualquier tipo de sugerencia!</p>
-      </div>
+      <BannerHeader
+        title="Contactanos"
+        src={contactImg}
+        description="Escribinos para poder brindarte una información personalizada sobre
+          nuestras capacitaciones."
+      />
 
       <Container className="contacto__container">
         <Row>

@@ -37,13 +37,6 @@ const Programas = () => {
 
   return (
     <div className="programas__div">
-      <div className="programas__divp">
-        <p>
-          Cada uno de los cursos está avalado por{" "}
-          <span style={{ fontWeight: "bold" }}>aider.org</span> entre otras
-          instituciones internacionales.
-        </p>
-      </div>
       <Row className="row-margin-0">
         <BannerHeader
           title="Programa"
@@ -51,6 +44,13 @@ const Programas = () => {
           src={imgCurso2}
         />
       </Row>
+      <div className="programas__divp">
+        <p>
+          Cada uno de los cursos está avalado por{" "}
+          <span style={{ fontWeight: "bold" }}>aider.org</span> entre otras
+          instituciones internacionales.
+        </p>
+      </div>
       <DataCards />
       <div className="programas__contenedorInfo">
         <div className="programas__info">
