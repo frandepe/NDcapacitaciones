@@ -13,7 +13,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { avalAction } from "../../redux/actions/avaldb";
 import Spiner from "../../shared/spiner";
 
-// gsap.registerPlugin(ScrollTrigger);
+
 
 const Confian = () => {
   const dispatch = useDispatch();
@@ -25,19 +25,6 @@ const Confian = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [dispatch]);
 
-  // useEffect(() => {
-  //   gsap.from(".confian__container", {
-  //     scrollTrigger: {
-  //       trigger: ".confian__container",
-  //       start: "top 90%",
-  //       end: "bottom 60%",
-  //     },
-  //     duration: 2,
-  //     ease: "ease-in",
-  //     y: 100,
-  //     opacity: 0,
-  //   });
-  // }, []);
   return (
     <div className="confian__container">
       <h2>Aval</h2>

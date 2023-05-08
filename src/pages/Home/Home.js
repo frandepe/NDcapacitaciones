@@ -5,25 +5,8 @@ import Leyes from "../../Components/Leyes/Leyes";
 import Confian from "../../Components/Confian/Confian";
 import NecesidadDeCapacitar from "../../Components/NecesidadDeCapacitar/NecesidadDeCapacitar";
 import Testimonial from "../../Components/Testimonial/Testimonial";
-// import { useEffect } from "react";
-// import gsap from "gsap";
-// import { ScrollTrigger } from "gsap/ScrollTrigger";
-// gsap.registerPlugin(ScrollTrigger);
 
 const Home = () => {
-  // useEffect(() => {
-  //   gsap.from(".home__containerIntroduction", {
-  //     scrollTrigger: {
-  //       trigger: ".home__containerIntroduction",
-  //       start: "top 90%",
-  //       end: "bottom 60%",
-  //     },
-  //     duration: 2,
-  //     ease: "ease-in",
-  //     y: 100,
-  //     opacity: 0,
-  //   });
-  // }, []);
 
   return (
     <div>

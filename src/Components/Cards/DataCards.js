@@ -3,6 +3,7 @@ import imgCard1 from "./ImgsCards/imgCursoGente.jpg";
 import imgCard2 from "./ImgsCards/ImgCursoGente6.jpg";
 import imgCard3 from "./ImgsCards/imgCurso3.jpg";
 import imgCard4 from "./ImgsCards/imgDog.jpeg";
+import imgCard5 from "./ImgsCards/pediatricos.jpg";
 import Cards from "./Cards";
 
 const Cas = () => {
@@ -30,6 +31,12 @@ const Cas = () => {
       descripcion:
         "El curso está dirigido a personas que tengan compromiso por las mascotas y quieran adquirir el conocimiento de cómo reconocer y actuar ante enfermedades súbitas y lesiones frecuentes en mascotashasta que llegue el veterinario o arribe al hospital veterinario.",
       imagen: imgCard4,
+    },
+    {
+      titulo: "Primeros Socorros Pediátricos",
+      descripcion:
+        "Este curso está diseñado para que los alumnos aprendan a reconocer y tratar eficazmente las emergencias en adolescentes, niños y bebés en los primeros minutos críticos hasta la llegada del personal de los servicios de emergencias médicas",
+      imagen: imgCard5,
     },
   ];
 

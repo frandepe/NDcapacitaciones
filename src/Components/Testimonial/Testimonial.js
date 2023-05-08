@@ -3,6 +3,9 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./Testimonial.scss";
 import { GrFormNext, GrFormPrevious } from "react-icons/gr";
+import img1 from "./argentinotestimonial.png"
+import img2 from "./ludotetimonial.png"
+import img3 from "./penitenciariatestimonial.jpg"
 
 const PreviousBtn = (props) => {
   console.log(props);
@@ -40,28 +43,24 @@ const Testimonial = () => {
         <h1 style={{ marginBottom: 20 }}>TESTIMONIOS</h1>
         <Slider prevArrow={<PreviousBtn />} nextArrow={<NextBtn />} dots>
           <Card
-            img="https://www.tutorialrepublic.com/examples/images/clients/1.jpg"
-            coment="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
-            name="David Garcia"
-            job="Músico"
+            img={img1}
+            coment="Excelente jornada en el Club Argentino de Trenque Lauquen, Nicolás dio un curso adaptado a las edades de los chicos, generándoles curiosidad e interés por el tema.
+            claro, preciso, didáctico, súper recomendable.
+            ya estams pensando en la fecha para repetirlo esta año."
+            name="Argentino"
+            job="Club"
           />
           <Card
-            img="https://www.tutorialrepublic.com/examples/images/clients/2.jpg"
-            coment="It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here'"
-            name="Paco De Lucia"
-            job="Bombero"
+            img={img3}
+            coment="La realidad es que De Paulo, mechando la charla con propias experiencias vividas y claridad de conceptos, mantuvo a todos activos participando, interesados en estos temas tan reales, cotidianos, tan de la vida misma. Y algo quedó claro: todos podemos salvar una vida teniendo estos conocimientos y actuando a tiempo"
+            name="Boletín de la penitenciaria"
+            job="Prensa"
           />
           <Card
-            img="https://www.tutorialrepublic.com/examples/images/clients/3.jpg"
-            coment="Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source."
-            name="Angel Di Maria"
-            job="Policia"
-          />
-          <Card
-            img="https://www.tutorialrepublic.com/examples/images/clients/4.jpg"
-            coment="There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text."
-            name="Maria Antonia"
-            job="Abogada"
+            img={img2}
+            coment="Cuando íbamos camino a la Ludo para el curso, coincidíamos con mi hermana que nos sentíamos totalmente inseguras para actuar frente a una situación  de asfixia con nuestros hijos(yo nunca lo pase, ella si y en ese momento no supo actuar, lo hizo mi mamá que en ese momento estaba presente). Llegábamos a la conclusión que la falta de información nos dejaba ese miedo, ese que hago si me pasa estar con alguien que necesita de mi. Cuando salimos del curso, fue otra la charla, salimos comentando todo lo que nos enseñaste, algunas cosas las había visto por tv o en alguna charla, pero jamás había experimentado hacer maniobras de rcp en un muñeco de adulto y en el de bebé"
+            name="Asistente al curso"
+            job="La Ludoteca"
           />
         </Slider>
       </div>
