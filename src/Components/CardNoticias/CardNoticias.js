@@ -13,18 +13,22 @@ const CardNoticias = ({ description, fecha, link, src, height = "200px" }) => {
       }}
     >
       <Card.ImgOverlay className="CardNoticias__info">
-        <a
-          target="_blank"
-          rel="noopener noreferrer"
-          href={link}
-          className="CardNoticias__leerMas"
-        >
-          Leer Más
-        </a>
+        {link && (
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href={link}
+            className="CardNoticias__leerMas"
+          >
+            Leer Más
+          </a>
+        )}
         <p className="CardNoticias__description">{description}</p>
-        <p className="CardNoticias__date">
-          <BsCalendarDate /> {fecha}
-        </p>
+        {fecha && (
+          <p className="CardNoticias__date">
+            <BsCalendarDate /> {fecha}
+          </p>
+        )}
       </Card.ImgOverlay>
     </Card>
   );

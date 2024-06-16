@@ -1,22 +1,39 @@
 .confian {
   &__container {
-    background-color: rgb(231, 231, 231);
-    padding: 2%;
-    margin-bottom: 4%;
-  }
-  &__flexImg {
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-
-    justify-items: center !important;
-    justify-content: center;
-
-    img {
-      width: 200px;
-      height: 100px;
-      margin-bottom: 20px;
+    margin-bottom: 20px;
+    h2 {
+      text-align: center;
     }
+  }
+  &__slider {
+    width: 75vw;
+    height: auto;
+    margin: auto;
+    overflow: hidden;
+  }
+  &__slide-track {
+    display: flex;
+    align-items: center;
+    animation: scroll 40s linear infinite;
+    -webkit-animation: scroll 40s linear infinite;
+    width: calc(200px * 12);
+  }
+  &__slide {
+    width: 200px;
+    img {
+      width: 100%;
+    }
+  }
+}
+
+@keyframes scroll {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(calc(-200px * 6));
+    transform: translateX(calc(-200px * 6));
   }
 }
 

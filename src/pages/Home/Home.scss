@@ -1,8 +1,31 @@
 .home {
+  &__containerSlider {
+    display: flex;
+    justify-content: center;
+  }
   &__titular {
     padding: 3%;
     font-size: 1.7em;
   }
+
+  &__intro {
+    width: 50vw;
+    height: 70vh;
+    display: flex;
+    padding-left: 5%;
+    align-items: center;
+    box-shadow: 0 10px 20px rgba(211, 233, 245, 0.2);
+    background: linear-gradient(86deg, #5f9dd3 0%, rgba(255, 255, 255, 1) 100%);
+    // filter: brightness(60%);
+    &--content {
+      display: flex;
+      flex-direction: column;
+      span {
+        color: var(--cuarto);
+      }
+    }
+  }
+
   &__sobremi::before {
     content: "⌟";
     font-weight: bold;
@@ -49,6 +72,17 @@
       padding-top: 10%;
       padding-bottom: 5%;
       border-left: none;
+    }
+    &__containerSlider {
+      flex-direction: column;
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .home {
+    &__intro {
+      display: none;
     }
   }
 }

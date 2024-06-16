@@ -1,11 +1,10 @@
 .Navbar3 {
   &__nav {
-    margin-left: 20%;
     font-weight: bold;
+    translate: 25vw;
   }
+
   &__losli {
-    display: block;
-    height: 100%;
     margin-right: 10px;
     position: relative;
   }
@@ -20,7 +19,6 @@
   }
   &__losli:hover::after {
     width: 100%;
-
     background-color: var(--cuarto);
   }
   &__contenedor-tel {

@@ -1,47 +1,42 @@
 import "./Confian.scss";
-// import imgConfian1 from "./confian1.jfif";
-// import imgConfian2 from "./confian2.jpg";
-// import imgConfian3 from "./confian3.png";
-// import imgConfian4 from "./confian4.jpg";
-// import imgConfian5 from "./confian5.png";
+import confian1png from "./confian1png.png";
+import confian2png from "./confian2png.png";
+import confian3png from "./confian3png.png";
+import confian4png from "./confian4png.png";
+import confian5png from "./confian5png.png";
+import confian6png from "./confian6png.png";
 import { Container, Col, Row } from "react-bootstrap";
-import { useEffect } from "react";
-// import gsap from "gsap";
-// import { ScrollTrigger } from "gsap/ScrollTrigger";
 import LazyLoad from "../LazyLoad/LazyLoad";
-import { useSelector, useDispatch } from "react-redux";
-import { avalAction } from "../../redux/actions/avaldb";
-import Spiner from "../../shared/spiner";
 
-
+const aval = [
+  { image: confian1png, id: 1 },
+  { image: confian2png, id: 2 },
+  { image: confian3png, id: 3 },
+  { image: confian4png, id: 4 },
+  { image: confian5png, id: 5 },
+  { image: confian6png, id: 6 },
+];
 
 const Confian = () => {
-  const dispatch = useDispatch();
-  const { avalInfo, loading } = useSelector((store) => store.aval);
-
-  useEffect(() => {
-    dispatch(avalAction(avalInfo));
-
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [dispatch]);
-
   return (
     <div className="confian__container">
-      <h2>Aval</h2>
-
-      <Container className="confian__flexImg">
-        <Row className="confian__colImg">
-          {!loading ? (
-            <Spiner />
-          ) : (
-            avalInfo?.aval?.map((element) => {
-              return (
-                <Col key={element.id}>
-                  <LazyLoad src={element.imagen} alt="imagen no encontrada" />
-                </Col>
-              );
-            })
-          )}
+      <h2>Apoyos Institucionales</h2>
+      <Container className="confian__slider">
+        <Row className="confian__slide-track">
+          {aval?.map((element) => {
+            return (
+              <Col key={element.id} className="confian__slide">
+                <LazyLoad src={element.image} alt="imagen no encontrada" />
+              </Col>
+            );
+          })}
+          {aval?.map((element) => {
+            return (
+              <Col key={element.id} className="confian__slide">
+                <LazyLoad src={element.image} alt="imagen no encontrada" />
+              </Col>
+            );
+          })}
         </Row>
       </Container>
     </div>

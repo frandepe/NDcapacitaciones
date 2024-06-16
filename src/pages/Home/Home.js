@@ -1,16 +1,27 @@
 import Slider from "../../Components/Slider/Slider";
-import { Container, Row, Col, Stack } from "react-bootstrap";
+import { Container, Row, Col, Stack, Button } from "react-bootstrap";
 import "./Home.scss";
 import Leyes from "../../Components/Leyes/Leyes";
 import Confian from "../../Components/Confian/Confian";
 import NecesidadDeCapacitar from "../../Components/NecesidadDeCapacitar/NecesidadDeCapacitar";
 import Testimonial from "../../Components/Testimonial/Testimonial";
+import { VerVideo } from "../../Components/VerVideo/VerVideo";
 
 const Home = () => {
-
   return (
     <div>
-      <Slider />
+      <div className="home__containerSlider">
+        <Slider />
+        <div className="home__intro">
+          <div className="home__intro--content">
+            <h1>
+              <span>ND</span>Capacitaciones
+            </h1>
+            <p>Cursos de primeros auxilios</p>
+            <Button href="/contacto">Contactar</Button>
+          </div>
+        </div>
+      </div>
       <Container className="home__containerIntroduction">
         <Row>
           <Col className="home__titular" sm={12}>
@@ -41,6 +52,7 @@ const Home = () => {
       </Container>
       <Leyes />
       <NecesidadDeCapacitar />
+      <VerVideo />
       <Testimonial />
       <div>
         <Stack

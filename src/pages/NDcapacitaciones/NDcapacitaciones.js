@@ -12,13 +12,15 @@ import img19 from "./new1cap.png";
 import img23 from "./olimpic2.jpg";
 import img26 from "./moto2.jpg";
 import img28 from "./jardin3.jpeg";
+import asichaCurso from "./asichaCurso.jpg";
+import dieselCurso from "./dieselCurso.png";
 import "./NDcapacitaciones.scss";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 const NDcapacitaciones = () => {
   const settings = {
-    dots: true,
+    dots: false,
     className: "center",
     centerMode: true,
     infinite: true,
@@ -28,6 +30,23 @@ const NDcapacitaciones = () => {
     speed: 1000,
     autoplaySpeed: 3000,
     cssEase: "linear",
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
   return (
     <div>
@@ -51,27 +70,24 @@ const NDcapacitaciones = () => {
 
       <h3 className="NDcapacitaciones__noticias">Últimas noticias</h3>
       <Row>
-        <Col sm="6">
+        <Col md="6" style={{ padding: "0px" }}>
           <CardNoticias
             height="400px"
-            description="Defensa civil capacitó en primeros auxilios con técnicas de rcp al personal que se desempeña en los jardines maternales municipales de la ciudad cabecera"
-            fecha="10 febrero, 2023"
-            link="https://www.trenquelauquen.gov.ar/noticias/defensa-civil-capacito-en-primeros-auxilios-con-tecnicas-de-rcp-al-personal-que-se-desempena-en-los-jardines-maternales-municipales-de-la-ciudad-cabecera/"
-            src={img28}
+            description="Capacitacion al personal de la Empresa Asicha de Trenque Lauquen desarrollo y producción de elásticos de suspensión"
+            src={asichaCurso}
           />
         </Col>
-        <Col sm="3">
+        <Col md="3">
           <Row style={{ marginBottom: "2px" }}>
             <CardNoticias
-              description="Se capacito en Socorrismo Urbano con RCP y uso del DEA a personal de la empresa IBERCOM-MULTICOM Fibra Optica de la Seccional Trenque Lauquen"
-              fecha="14 febrero, 2023"
-              src={img26}
+              description="Capacitacion al personal de la empresa Diésel Lange Sucursal Trenque Lauquen representantes de la marca John Deere"
+              src={dieselCurso}
               height="199px"
             />
           </Row>
           <Row style={{ marginTop: "2px" }}>
             <CardNoticias
-              description="Realizamos en Mulchen una capacitación sobre maniobras de reanimación cardiopulmonar (RCP) para todos los colaboradores de la empresa"
+              description="Mulchen: Maniobras de reanimación cardiopulmonar (RCP) para todos los colaboradores de la empresa"
               fecha="4 octubre, 2022"
               link="https://www.instagram.com/p/CjQHe-5ODYl/"
               src={img19}
@@ -79,10 +95,10 @@ const NDcapacitaciones = () => {
             />
           </Row>
         </Col>
-        <Col sm="3">
+        <Col md="3">
           <Row style={{ marginBottom: "2px" }}>
             <CardNoticias
-              description="Dentro del Programa de Capacitaciones y Prevencion de Riesgos, la Coordinacion de Defensa Civil Municipal junto a integrantes del grupo de..."
+              description="Dentro del Programa de Capacitaciones y Prevencion de Riesgos, la Coordinacion de..."
               fecha="20 junio, 2022"
               link="https://www.trenquelauquen.gov.ar/noticias/alumnos-as-docentes-y-familias-de-las-escuelas-n501-y-502-tuvieron-un-taller-de-primeros-auxilios-con-tecnicas-de-rcp/"
               src={img17}
@@ -91,7 +107,7 @@ const NDcapacitaciones = () => {
           </Row>
           <Row style={{ marginTop: "2px" }}>
             <CardNoticias
-              description="La Coordinación de Defensa Civil Municipal, a cargo de Nicolás De Paulo, brindó una capacitación sobre Primeros Auxilios con técnicas de Reanimación Cardiopulmonar..."
+              description="La Coordinación de Defensa Civil Municipal, a cargo de Nicolás De Paulo, brindó una capacitación..."
               fecha="23 abril, 2022"
               link="https://laopinion.com.ar/taller-de-rcp-y-primeros-auxilios-para-personal-de-patrulla-rural/"
               src={img10}
@@ -100,7 +116,23 @@ const NDcapacitaciones = () => {
           </Row>
         </Col>
       </Row>
-
+      <Row style={{ marginTop: "2px" }}>
+        <Col md="3" style={{ padding: "0px" }}>
+          <CardNoticias
+            description="Técnicas de rcp al personal que se desempeña en los jardines maternales municipales de la ciudad cabecera"
+            fecha="10 febrero, 2023"
+            link="https://www.trenquelauquen.gov.ar/noticias/defensa-civil-capacito-en-primeros-auxilios-con-tecnicas-de-rcp-al-personal-que-se-desempena-en-los-jardines-maternales-municipales-de-la-ciudad-cabecera/"
+            src={img28}
+          />
+        </Col>
+        <Col md="3" style={{ padding: "0px" }}>
+          <CardNoticias
+            description="RCP y uso del DEA a personal de la empresa IBERCOM-MULTICOM Fibra Optica de la Seccional Trenque Lauquen"
+            fecha="14 febrero, 2023"
+            src={img26}
+          />
+        </Col>
+      </Row>
       <Row className="NDcapacitaciones__slider">
         <Slider {...settings}>
           <CardNoticias

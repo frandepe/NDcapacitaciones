@@ -1,46 +1,39 @@
 .NecesidadDeCapacitar {
-  &__container {
-    background: var(--primario);
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-    border-radius: 0px 54px 0px 0px;
-    -webkit-border-radius: 0px 54px 0px 0px;
-    -moz-border-radius: 0px 54px 0px 0px;
-  }
-  &__container2 {
-    color: white;
-    background: var(--cuarto);
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-  }
-  &__container3 {
-    background: rgb(218, 201, 47);
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-    border-radius: 0px 0px 54px 0px;
-    -webkit-border-radius: 0px 0px 54px 0px;
-    -moz-border-radius: 0px 0px 54px 0px;
-    margin-bottom: 3%;
-  }
-}
-.colimg {
-  padding: 0 !important;
-}
-
-.colimg2 {
-  display: flex;
-  justify-content: flex-end;
-}
-
-.divContainer {
-  h3 {
-    margin-top: 10%;
-  }
-}
-@media (max-width: 600px) {
-  .colimg {
+  &__Cards {
+    display: flex;
+    justify-content: center;
+    text-align: center;
     img {
-      width: 100vw;
+      border-bottom: 4px solid var(--primario);
+      filter: sepia(100%) hue-rotate(165deg) saturate(200%) brightness(90%);
     }
   }
-  .colimg2 {
-    order: -1;
+  &__Cards:first-child {
+    img {
+      border-bottom-left-radius: 50%;
+    }
   }
+  &__Cards:last-child {
+    img {
+      border-bottom-right-radius: 50%;
+    }
+  }
+  &__CardBody {
+    position: relative;
+  }
+  &__icon {
+    color: black;
+    position: absolute;
+    top: -20px;
+    right: 40%;
+    background-color: var(--primario);
+    border-radius: 50%;
+    padding: 5px;
+  }
+  &__title {
+    padding-top: 10px;
+  }
+}
+
+@media (max-width: 600px) {
 }

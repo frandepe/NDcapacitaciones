@@ -7,19 +7,14 @@ import {
   Button,
   Alert,
 } from "react-bootstrap";
-import { useSelector, useDispatch } from "react-redux";
-import { cursosAction } from "../../redux/actions/cursosdb";
 import emailjs from "emailjs-com";
 import "./Contacto.scss";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import img from "./comunicar.png";
 import contactImg from "./contactimg2.jpg";
 import BannerHeader from "../../Components/BannerHeader/BannerHeader";
 
 const Contacto = () => {
-  const dispatch = useDispatch();
-  const { cursosInfo } = useSelector((store) => store.cursos);
-
   const [resultado, setResultado] = useState("");
 
   const sendEmail = (e) => {
@@ -42,12 +37,6 @@ const Contacto = () => {
       );
     e.target.reset();
   };
-
-  useEffect(() => {
-    dispatch(cursosAction(cursosInfo));
-
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [dispatch]);
 
   return (
     <div>
@@ -111,7 +100,7 @@ const Contacto = () => {
                   placeholder="Leave a comment here"
                 />
               </FloatingLabel> */}
-              <Form.Select
+              {/* <Form.Select
                 className="me-sm-2"
                 id="inlineFormCustomSelect"
                 name="asunto"
@@ -129,8 +118,11 @@ const Contacto = () => {
                     );
                   })
                   .reverse()}
-              </Form.Select>
-              <FloatingLabel controlId="floatingTextarea2" label="Mensaje*">
+              </Form.Select> */}
+              <FloatingLabel
+                controlId="floatingTextarea2"
+                label="Escriba un mensaje*"
+              >
                 <Form.Control
                   required
                   name="mensaje"

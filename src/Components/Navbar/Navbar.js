@@ -12,11 +12,11 @@ const Navbar3 = () => {
   return (
     <div className="nav-cont">
       <Navbar bg="light" expand="xl" sticky="top">
-        <Container fluid>
+        <Container fluid className="Navbar3__container">
           <Navbar.Brand href="/">
             <img
               src={logo}
-              width="250"
+              width="180"
               height="auto"
               className="d-inline-block align-top img-logotipo"
               alt={"logo"}
@@ -24,11 +24,7 @@ const Navbar3 = () => {
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse>
-            <Nav
-              className="me-auto my-2 my-lg-0 me-2 Navbar3__nav"
-              style={{ maxHeight: "500px" }}
-              navbarScroll
-            >
+            <Nav className="me-auto Navbar3__nav" navbarScroll>
               <Nav.Link className="Navbar3__losli" href="/">
                 <AiFillHome className="Navbar3__icon" /> Inicio
               </Nav.Link>

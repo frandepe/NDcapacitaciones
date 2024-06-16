@@ -32,18 +32,13 @@ const Footer = () => {
                 <i className="fab fa-instagram"></i>
               </a>
             </div>
-            <div>
-              <a href="./pagos" className="footer__logomp">
-                <img src={logoMP} alt="Logo " />
-              </a>
-            </div>
           </Col>
         </Row>
         <Row className="footer__colup">
-          <Col>© FMD | Todos los derechos reservados 2023</Col>
+          <Col>© FMD | Todos los derechos reservados 2024</Col>
           <Col>
             Desarrollo y diseño por{" "}
-            <a href="https://www.frandepaulo.com/">FMD</a>
+            <a href="https://frandepaulo.netlify.app/">FMD</a>
           </Col>
         </Row>
       </Container>

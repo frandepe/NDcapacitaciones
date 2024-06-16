@@ -8,7 +8,7 @@ const VideosND = () => {
       <Container fluid>
         <Row gap={2} className="row-md-4 mx-auto">
           <Col>
-            <CustomReactPlayer url="https://www.youtube.com/embed/1O9yrxPGGcU?origin=https://braintool.org" />
+            <CustomReactPlayer url="https://www.youtube.com/embed/QqPQu4mZiHI?origin=https://braintool.org" />
           </Col>
           <Col>
             <CustomReactPlayer url="https://www.youtube.com/embed/xIejawqKj1o?origin=https://braintool.org" />

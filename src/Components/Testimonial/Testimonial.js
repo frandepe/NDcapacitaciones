@@ -3,12 +3,11 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./Testimonial.scss";
 import { GrFormNext, GrFormPrevious } from "react-icons/gr";
-import img1 from "./argentinotestimonial.png"
-import img2 from "./ludotetimonial.png"
-import img3 from "./penitenciariatestimonial.jpg"
+import img1 from "./argentinotestimonial.png";
+import img2 from "./ludotetimonial.png";
+import img3 from "./penitenciariatestimonial.jpg";
 
 const PreviousBtn = (props) => {
-  console.log(props);
   const { className, onClick } = props;
   return (
     <div className={className} onClick={onClick}>

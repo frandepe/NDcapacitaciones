@@ -34,7 +34,7 @@ export default function CustomReactPlayer({ url }) {
         volume={volume}
         muted={muted}
         width="100%"
-        height="100%"
+        // height="60vh"
         fallback={5}
         onSeek={(e) => console.log(e)}
         onDuration={(durationVideo) => setDuration(durationVideo)}
