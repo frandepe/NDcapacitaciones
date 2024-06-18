@@ -47,6 +47,7 @@ const Home = () => {
             <p>“Formador de Brigadistas de Emergencias”</p>
             <p>“Monitor de Zonas Cardio Seguras”</p>
             <p>“Primeros Auxilios para Perros y Gatos”</p>
+            <p>“Primeros Socorros Psicologicos”</p>
           </Col>
         </Row>
       </Container>

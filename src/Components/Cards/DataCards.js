@@ -4,6 +4,7 @@ import imgCard2 from "./ImgsCards/ImgCursoGente6.jpg";
 import imgCard3 from "./ImgsCards/imgCurso3.jpg";
 import imgCard4 from "./ImgsCards/imgDog.jpeg";
 import imgCard5 from "./ImgsCards/pediatricos.jpg";
+import imgCard6 from "../Testimonial/penitenciariatestimonial.jpg";
 import Cards from "./Cards";
 
 const Cas = () => {
@@ -37,6 +38,12 @@ const Cas = () => {
       descripcion:
         "Este curso está diseñado para que los alumnos aprendan a reconocer y tratar eficazmente las emergencias en adolescentes, niños y bebés en los primeros minutos críticos hasta la llegada del personal de los servicios de emergencias médicas",
       imagen: imgCard5,
+    },
+    {
+      titulo: "Primeros Socorros Psicológicos",
+      descripcion:
+        "Este curso está dirigido a todos aquellos que cumplen con funciones en emergencias y/o son víctimas de las mismas. Esta rama de la Psicología que tiene la función no solo de estudiar la reacción de las personas ante situaciones de emergencia, sino también en el antes, el durante y el después de estas situaciones. Este curso actúa  preparando y fortaleciendo a las personas, impartiendo conocimiento y técnicas que les sean útiles, funcionales, para afrontar de la mejor manera la situación de emergencia y sus posteriores reacciones. Equilibrio emocional. Autocontrol. Resistencia a la fatiga psicológica y física. Escucha activa. Habilidades de trabajo en equipo. Tolerancia a la frustración. Saber transmitir de forma adecuada las malas noticias. Descargas emocionales. Estos y otros temas encontraras en este curso que te ayudara a prepararte para afrontar eventos de emergencias y que tu mente no enferme ante la pasión de tu vocación.",
+      imagen: imgCard6,
     },
   ];
 

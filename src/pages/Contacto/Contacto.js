@@ -13,19 +13,21 @@ import { useState } from "react";
 import img from "./comunicar.png";
 import contactImg from "./contactimg2.jpg";
 import BannerHeader from "../../Components/BannerHeader/BannerHeader";
+import { cursosInfo } from "../Fechas/Cursos";
 
 const Contacto = () => {
   const [resultado, setResultado] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const sendEmail = (e) => {
     e.preventDefault();
-
+    setLoading(true);
     emailjs
       .sendForm(
-        "NDcapacitaciones",
-        "template_l95zlcb",
+        "service_05mdgai",
+        "template_r52o8xo",
         e.target,
-        "user_hMTTtuym8LmPBuh0B4Z05"
+        "1pJRcoYPZ5B_8OK6a"
       )
       .then(
         (result) => {
@@ -35,8 +37,11 @@ const Contacto = () => {
           console.log(error.text);
         }
       );
+    setLoading(false);
     e.target.reset();
   };
+  const hoy = new Date();
+  const hayCursos = cursosInfo.some((e) => new Date(e.createdDate) > hoy);
 
   return (
     <div>
@@ -91,26 +96,20 @@ const Contacto = () => {
                   </Form.Select>
                 </Col>
               </FloatingLabel>
-
-              {/* <FloatingLabel label="Asunto*" className="mb-3">
-                <Form.Control
-                  required
-                  name="asunto"
-                  as="textarea"
-                  placeholder="Leave a comment here"
-                />
-              </FloatingLabel> */}
-              {/* <Form.Select
+              <Form.Select
                 className="me-sm-2"
                 id="inlineFormCustomSelect"
-                name="asunto"
+                name="curso"
                 style={{ marginBottom: "20px" }}
               >
                 <option value="" disabled>
-                  Selecciona el curso al que desea asistir
+                  {hayCursos
+                    ? "Selecciona el curso al que desea asistir"
+                    : "No registramos cursos pendientes"}
                 </option>
-                {cursosInfo?.cursos
-                  ?.map((e) => {
+                {cursosInfo
+                  .filter((e) => new Date(e.createdDate) > hoy)
+                  .map((e) => {
                     return (
                       <option key={e.id} value={e.titulo + " " + e.fecha}>
                         {e.titulo + " " + e.fecha}
@@ -118,7 +117,7 @@ const Contacto = () => {
                     );
                   })
                   .reverse()}
-              </Form.Select> */}
+              </Form.Select>
               <FloatingLabel
                 controlId="floatingTextarea2"
                 label="Escriba un mensaje*"
@@ -132,7 +131,7 @@ const Contacto = () => {
                 />
               </FloatingLabel>
               <Button className="contacto__btn" type="submit">
-                Enviar
+                {!loading ? "Enviar" : "Enviando..."}
               </Button>
             </Form>
             <div className="contacto__b">
@@ -142,12 +141,12 @@ const Contacto = () => {
                     <Alert.Heading>Hola!</Alert.Heading>
                     <p>
                       Gracias por contactarse, en breve nos pondremos en
-                      contacto con ustéd. Recuerda que puedes enviarnos un
+                      contacto con ustéd. Recuerde que puede enviarnos un
                       mensaje directo a nuestro WhatsApp.
                     </p>
                     <hr />
                     <p className="mb-0">
-                      Debajo encontrarás nuestras redes sociales para mantenerte
+                      Debajo encontrará nuestras redes sociales para mantenerse
                       al día sobre las capacitaciones.
                     </p>
                   </Alert>

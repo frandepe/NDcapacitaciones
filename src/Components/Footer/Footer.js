@@ -35,10 +35,16 @@ const Footer = () => {
           </Col>
         </Row>
         <Row className="footer__colup">
-          <Col>© FMD | Todos los derechos reservados 2024</Col>
+          <Col>© Todos los derechos reservados 2024</Col>
           <Col>
             Desarrollo y diseño por{" "}
-            <a href="https://frandepaulo.netlify.app/">FMD</a>
+            <a
+              rel="noreferrer"
+              target="_blank"
+              href="https://frandepaulo.netlify.app/"
+            >
+              FMD
+            </a>
           </Col>
         </Row>
       </Container>

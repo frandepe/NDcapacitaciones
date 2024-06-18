@@ -12,6 +12,7 @@ import img19 from "./new1cap.png";
 import img23 from "./olimpic2.jpg";
 import img26 from "./moto2.jpg";
 import img28 from "./jardin3.jpeg";
+import img27 from "./Curso-psicologico/curso-psico1.jpeg";
 import asichaCurso from "./asichaCurso.jpg";
 import dieselCurso from "./dieselCurso.png";
 import "./NDcapacitaciones.scss";
@@ -73,8 +74,9 @@ const NDcapacitaciones = () => {
         <Col md="6" style={{ padding: "0px" }}>
           <CardNoticias
             height="400px"
-            description="Capacitacion al personal de la Empresa Asicha de Trenque Lauquen desarrollo y producción de elásticos de suspensión"
-            src={asichaCurso}
+            description="Curso de Primeros Socorros Psicológicos en Bomberos Voluntarios de Fortin Olavarria con la presencia de los integrantes del Cuerpo Activo"
+            fecha="Junio, 2023"
+            src={img27}
           />
         </Col>
         <Col md="3">
@@ -130,6 +132,13 @@ const NDcapacitaciones = () => {
             description="RCP y uso del DEA a personal de la empresa IBERCOM-MULTICOM Fibra Optica de la Seccional Trenque Lauquen"
             fecha="14 febrero, 2023"
             src={img26}
+          />
+        </Col>
+        <Col md="3" style={{ padding: "0px" }}>
+          <CardNoticias
+            fecha="Junio, 2024"
+            description="Capacitacion al personal de la Empresa Asicha de Trenque Lauquen desarrollo y producción de elásticos de suspensión"
+            src={asichaCurso}
           />
         </Col>
       </Row>
