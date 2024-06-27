@@ -16,7 +16,7 @@ const Fechas = () => {
       return <Completionist />;
     } else {
       return (
-        <div>
+        <div className="fechas__aunquedan">
           <p>
             {`Aún quedan:
 					${days} días, ${hours} horas, ${minutes} minutos para

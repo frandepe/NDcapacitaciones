@@ -41,7 +41,7 @@ const Contacto = () => {
     e.target.reset();
   };
   const hoy = new Date();
-  const hayCursos = cursosInfo.some((e) => new Date(e.createdDate) > hoy);
+  const hayCursos = cursosInfo.some((e) => new Date(e.countdown) > hoy);
 
   return (
     <div>
@@ -108,7 +108,7 @@ const Contacto = () => {
                     : "No registramos cursos pendientes"}
                 </option>
                 {cursosInfo
-                  .filter((e) => new Date(e.createdDate) > hoy)
+                  .filter((e) => new Date(e.countdown) > hoy)
                   .map((e) => {
                     return (
                       <option key={e.id} value={e.titulo + " " + e.fecha}>

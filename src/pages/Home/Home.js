@@ -6,10 +6,15 @@ import Confian from "../../Components/Confian/Confian";
 import NecesidadDeCapacitar from "../../Components/NecesidadDeCapacitar/NecesidadDeCapacitar";
 import Testimonial from "../../Components/Testimonial/Testimonial";
 import { VerVideo } from "../../Components/VerVideo/VerVideo";
+import ModalPromoCurso from "../../Components/ModalPromoCurso/ModalPromoCurso";
+import { cursosInfo } from "../Fechas/Cursos";
 
 const Home = () => {
+  const hoy = new Date();
+  const hayCursos = cursosInfo.some((e) => new Date(e.countdown) > hoy);
   return (
     <div>
+      {hayCursos && <ModalPromoCurso />}
       <div className="home__containerSlider">
         <Slider />
         <div className="home__intro">

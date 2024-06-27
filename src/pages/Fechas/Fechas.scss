@@ -16,7 +16,10 @@
       height: auto;
     }
   }
-
+  &__aunquedan p {
+    font-weight: bold;
+    color: green;
+  }
   &__info {
     display: flex;
     justify-content: space-around;
