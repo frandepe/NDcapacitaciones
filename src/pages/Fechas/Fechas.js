@@ -18,8 +18,8 @@ const Fechas = () => {
       return (
         <div className="fechas__aunquedan">
           <p>
-            {`Aún quedan:
-					${days} días, ${hours} horas, ${minutes} minutos para
+            {`Todavía tenes
+					${days} días, ${hours} horas y ${minutes} minutos para
 					participar`}
           </p>
         </div>
@@ -65,17 +65,25 @@ const Fechas = () => {
                       <span>Lugar:</span> {element.lugar}
                     </p>
                     <p>
-                      <span>Horario:</span> {element.horario} hs
+                      <span>Horario:</span> {element.horario}hs
                     </p>
                     <b>
                       {element.certificado &&
                         "✓ Certificado nacional o internacional"}
                     </b>
-                    {finishDate > new Date() && (
-                      <div className="infofecha__button">
-                        <Button href="contacto">Consultar</Button>
-                      </div>
-                    )}
+
+                    {finishDate > new Date() &&
+                      (element.link ? (
+                        <div className="infofecha__button">
+                          <Button target="__blank" href={element.link}>
+                            Inscribirse
+                          </Button>
+                        </div>
+                      ) : (
+                        <div className="infofecha__button">
+                          <Button href="contacto">Consultar</Button>
+                        </div>
+                      ))}
                   </div>
                 );
               })

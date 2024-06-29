@@ -41,11 +41,11 @@ function ModalPromoCurso() {
           <h5>Tenes tiempo de inscribirte</h5>
           {cursosInfo
             .filter((e) => new Date(e.countdown) > hoy)
-            .map((e) => {
+            .map((e, i) => {
               return (
                 <div key={e.id} className="ModalPromoCurso__info">
                   <p>
-                    {e.titulo} -{" "}
+                    {i + 1} - {e.titulo} -{" "}
                     <span className="ModalPromoCurso__info--span">
                       {e.fecha}
                     </span>
