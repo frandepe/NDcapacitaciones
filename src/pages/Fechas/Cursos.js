@@ -1,16 +1,15 @@
 export const cursosInfo = [
   {
     certificado: false,
-    countdown: "2024-07-05T20:00:00",
+    countdown: "2024-07-20T14:00:00",
     descripcion:
-      "¡Aprendé a salvar vidas con este taller! Cómo proceder ante fracturas, inmovilización, traslados y cuidados en caso de accidentes.",
-    fecha: "5 de Julio 2024",
-    horario: "20:00",
-    id: "6292d11043b3f73455",
-    localidad: "Trenque Lauquen",
-    lugar: "9 de Julio 267",
-    titulo: "Charla-taller para MOTOCICLISTAS. Primeros auxilios con RCP y DEA",
-    link: "https://forms.gle/QKbZL7P9m5gfowGD6",
+      "Charla taller destinado a: Bomberos, policías, enfermeros/as y todos aquellos que sufran por su pasión",
+    fecha: "20 de Julio 2024",
+    horario: "14:00",
+    id: "j29323nf9238832",
+    localidad: "Carmen De Patagones",
+    lugar: "B° Bañado M. Mora 181",
+    titulo: "Primeros Socorros Psicológicos",
   },
   {
     certificado: true,
@@ -23,6 +22,19 @@ export const cursosInfo = [
     localidad: "Trenque Lauquen",
     lugar: "VIANI 230",
     titulo: "Socorrismo urbano con RCP y DEA",
+  },
+  {
+    certificado: false,
+    countdown: "2024-07-05T20:00:00",
+    descripcion:
+      "¡Aprendé a salvar vidas con este taller! Cómo proceder ante fracturas, inmovilización, traslados y cuidados en caso de accidentes.",
+    fecha: "5 de Julio 2024",
+    horario: "20:00",
+    id: "6292d11043b3f73455",
+    localidad: "Trenque Lauquen",
+    lugar: "9 de Julio 267",
+    titulo: "Charla-taller para MOTOCICLISTAS. Primeros auxilios con RCP y DEA",
+    link: "https://forms.gle/QKbZL7P9m5gfowGD6",
   },
   {
     certificado: false,

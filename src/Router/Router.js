@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Footer from "../Components/Footer/Footer";
 import Navbar3 from "../Components/Navbar/Navbar";
 import Login from "../Components/Auth/Login";
@@ -14,7 +14,6 @@ import AdminCursosForm from "../pages/Admin/AdminCursosForm";
 import AdminAvalForm from "../pages/Admin/AdminAvalForm";
 import PrivateRoutes from "./private.routes";
 import AdminAval from "../pages/Admin/AdminAval";
-import { MercadoPago } from "../pages/MercadoPago/MercadoPago";
 
 const Router = () => {
   return (
