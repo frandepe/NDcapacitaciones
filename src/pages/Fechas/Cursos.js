@@ -1,5 +1,16 @@
 export const cursosInfo = [
   {
+    certificado: true,
+    countdown: "2024-08-03T9:30:00",
+    descripcion: "Taller de primeros auxilios infantiles y adultos",
+    fecha: "3 de Agosto 2024",
+    horario: "9:30",
+    id: "j29323nf923883g34g2",
+    localidad: "Trenque Lauquen",
+    lugar: "Farrington 172",
+    titulo: "RCP y uso de DEA",
+  },
+  {
     certificado: false,
     countdown: "2024-07-20T14:00:00",
     descripcion:
