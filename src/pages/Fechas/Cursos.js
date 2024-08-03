@@ -1,7 +1,7 @@
 export const cursosInfo = [
   {
     certificado: true,
-    countdown: "2024-08-03T9:30:00",
+    countdown: "2024-08-03T09:30:00",
     descripcion: "Taller de primeros auxilios infantiles y adultos",
     fecha: "3 de Agosto 2024",
     horario: "9:30",
