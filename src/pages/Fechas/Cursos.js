@@ -1,6 +1,17 @@
 export const cursosInfo = [
   {
     certificado: true,
+    countdown: "2024-09-10T20:00:00",
+    descripcion: "Curso de primeros socorros con RCP y uso del DEA",
+    fecha: "10 de Septiembre 2024",
+    horario: "20:00",
+    id: "j2932d23nf923883g34g24",
+    localidad: "Trenque Lauquen",
+    lugar: "Viani 230",
+    titulo: "RCP y uso de DEA",
+  },
+  {
+    certificado: true,
     countdown: "2024-08-03T09:30:00",
     descripcion: "Taller de primeros auxilios infantiles y adultos",
     fecha: "3 de Agosto 2024",
