@@ -1,6 +1,17 @@
 export const cursosInfo = [
   {
     certificado: true,
+    countdown: "2024-10-17T20:00:00",
+    descripcion: "Curso de socorrismo urbano RCP y DEA",
+    fecha: "17 de Octubre 2024",
+    horario: "20:00",
+    id: "mdasdsdij091j2d",
+    localidad: "Trenque Lauquen",
+    lugar: "Viani 230",
+    titulo: "RCP y uso de DEA",
+  },
+  {
+    certificado: true,
     countdown: "2024-09-10T20:00:00",
     descripcion: "Curso de primeros socorros con RCP y uso del DEA",
     fecha: "10 de Septiembre 2024",
