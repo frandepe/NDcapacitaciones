@@ -11,7 +11,7 @@ const VideosND = () => {
             <CustomReactPlayer url="https://www.youtube.com/embed/QqPQu4mZiHI?origin=https://braintool.org" />
           </Col>
           <Col>
-            <CustomReactPlayer url="https://www.youtube.com/embed/xIejawqKj1o?origin=https://braintool.org" />
+            <CustomReactPlayer url="https://www.youtube.com/watch?v=3y3dcv9JbjY" />
           </Col>
           <Col>
             <CustomReactPlayer url="https://www.youtube.com/embed/yoYdL98Ibwk?origin=https://braintool.org" />

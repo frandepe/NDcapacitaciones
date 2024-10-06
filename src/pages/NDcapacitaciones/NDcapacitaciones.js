@@ -15,6 +15,9 @@ import img28 from "./jardin3.jpeg";
 import img27 from "./Curso-psicologico/curso-psico1.jpeg";
 import asichaCurso from "./asichaCurso.jpg";
 import dieselCurso from "./dieselCurso.png";
+import jardinInfantes from "./jardinInfantes.jpg";
+import colegioGeronimo from "./colegioGeronimo.jpg";
+import patagones from "./patagones.jpg";
 import "./NDcapacitaciones.scss";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -139,6 +142,32 @@ const NDcapacitaciones = () => {
             fecha="Junio, 2024"
             description="Capacitacion al personal de la Empresa Asicha de Trenque Lauquen desarrollo y producción de elásticos de suspensión"
             src={asichaCurso}
+          />
+        </Col>
+        <Col md="3" style={{ padding: "0px" }}>
+          <CardNoticias
+            fecha="Agosto, 2024"
+            description="Los chicos del Grupo Scout Conrado Villegas recibieron una charla sobre primeros auxilios con técnicas de RCP"
+            link="https://www.facebook.com/story.php?story_fbid=920970040074354&id=100064840984133&rdid=Lfy3e6PDbRJ9JGnd"
+            src={jardinInfantes}
+          />
+        </Col>
+      </Row>
+      <Row style={{ marginTop: "2px" }}>
+        <Col md="3" style={{ padding: "0px" }}>
+          <CardNoticias
+            fecha="Septiembre, 2024"
+            description="Defensa Civil municipal brindó varias charlas de primeros auxilios con técnicas de RCP a estudiantes del colegio Miguel Di Gerónimo"
+            link="https://www.facebook.com/story.php?story_fbid=932268908944467&id=100064840984133&rdid=GXoRwwiYD6iDTodr"
+            src={colegioGeronimo}
+          />
+        </Col>
+        <Col md="3" style={{ padding: "0px" }}>
+          <CardNoticias
+            fecha="Julio, 2024"
+            description="Taller sobre Socorro Psicológico en Patagones con la activa participación del coordinador de defensa civil municipal"
+            link="https://www.facebook.com/story.php?story_fbid=904579061713452&id=100064840984133&rdid=XD3hKt3GnDNASMr6"
+            src={patagones}
           />
         </Col>
       </Row>
