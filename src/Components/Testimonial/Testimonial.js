@@ -44,8 +44,8 @@ const Testimonial = () => {
           <Card
             img={img1}
             coment="Excelente jornada en el Club Argentino de Trenque Lauquen, Nicolás dio un curso adaptado a las edades de los chicos, generándoles curiosidad e interés por el tema.
-            claro, preciso, didáctico, súper recomendable.
-            ya estams pensando en la fecha para repetirlo esta año."
+            Claro, preciso, didáctico, súper recomendable.
+            Ya estamos pensando en la fecha para repetirlo este año."
             name="Argentino"
             job="Club"
           />
@@ -57,7 +57,7 @@ const Testimonial = () => {
           />
           <Card
             img={img2}
-            coment="Cuando íbamos camino a la Ludo para el curso, coincidíamos con mi hermana que nos sentíamos totalmente inseguras para actuar frente a una situación  de asfixia con nuestros hijos(yo nunca lo pase, ella si y en ese momento no supo actuar, lo hizo mi mamá que en ese momento estaba presente). Llegábamos a la conclusión que la falta de información nos dejaba ese miedo, ese que hago si me pasa estar con alguien que necesita de mi. Cuando salimos del curso, fue otra la charla, salimos comentando todo lo que nos enseñaste, algunas cosas las había visto por tv o en alguna charla, pero jamás había experimentado hacer maniobras de rcp en un muñeco de adulto y en el de bebé"
+            coment="Cuando íbamos camino a la Ludo para el curso, coincidíamos con mi hermana que nos sentíamos totalmente inseguras para actuar frente a una situación  de asfixia con nuestros hijos (yo nunca lo pase, ella si y en ese momento no supo actuar, lo hizo mi mamá que en ese momento estaba presente). Llegábamos a la conclusión que la falta de información nos dejaba ese miedo, ese que hago si me pasa estar con alguien que necesita de mi. Cuando salimos del curso, fue otra la charla, salimos comentando todo lo que nos enseñaste, algunas cosas las había visto por tv o en alguna charla, pero jamás había experimentado hacer maniobras de rcp en un muñeco de adulto y en el de bebé"
             name="Asistente al curso"
             job="La Ludoteca"
           />

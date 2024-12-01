@@ -48,7 +48,7 @@ const Contacto = () => {
       <BannerHeader
         title="Contactanos"
         src={contactImg}
-        description="Escribinos para poder brindarte una información personalizada sobre
+        description="Escribinos para poder brindarle una información personalizada sobre
           nuestras capacitaciones."
       />
 
@@ -104,8 +104,11 @@ const Contacto = () => {
               >
                 <option value="" disabled>
                   {hayCursos
-                    ? "Selecciona el curso al que desea asistir"
+                    ? "Si desea asistir a un curso, por favor selecciónelo"
                     : "No registramos cursos pendientes"}
+                </option>
+                <option value="Ningun curso seleccionado">
+                  Seleccione el curso al que desea asistir (opcional)
                 </option>
                 {cursosInfo
                   .filter((e) => new Date(e.countdown) > hoy)

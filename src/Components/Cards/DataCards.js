@@ -30,7 +30,7 @@ const Cas = () => {
     {
       titulo: "Primeros Auxilios para Perros y Gatos",
       descripcion:
-        "El curso está dirigido a personas que tengan compromiso por las mascotas y quieran adquirir el conocimiento de cómo reconocer y actuar ante enfermedades súbitas y lesiones frecuentes en mascotashasta que llegue el veterinario o arribe al hospital veterinario.",
+        "El curso está dirigido a personas que tengan compromiso por las mascotas y quieran adquirir el conocimiento de cómo reconocer y actuar ante enfermedades súbitas y lesiones frecuentes en mascotas hasta que llegue el veterinario o arribe al hospital veterinario.",
       imagen: imgCard4,
     },
     {

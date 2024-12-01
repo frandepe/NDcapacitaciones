@@ -11,8 +11,10 @@ import img17 from "./edespecial2.jpg";
 import img19 from "./new1cap.png";
 import img23 from "./olimpic2.jpg";
 import img26 from "./moto2.jpg";
-import img28 from "./jardin3.jpeg";
 import img27 from "./Curso-psicologico/curso-psico1.jpeg";
+import img28 from "./jardin3.jpeg";
+import img29 from "./ansianos-y-personal-de-seguridad.jpeg";
+import img30 from "./girodias.jpg";
 import asichaCurso from "./asichaCurso.jpg";
 import dieselCurso from "./dieselCurso.png";
 import jardinInfantes from "./jardinInfantes.jpg";
@@ -77,17 +79,18 @@ const NDcapacitaciones = () => {
         <Col md="6" style={{ padding: "0px" }}>
           <CardNoticias
             height="400px"
-            description="Curso de Primeros Socorros Psicológicos en Bomberos Voluntarios de Fortin Olavarria con la presencia de los integrantes del Cuerpo Activo"
-            fecha="Junio, 2023"
-            src={img27}
+            description="Girodías da un paso hacia la esperanza: Capacitación en RCP y entrega de un DEA para salvar vidas"
+            fecha="Noviembre, 2024"
+            src={img30}
+            link="https://nexotecnologico.com/girodias-trenque-lauquen/"
           />
         </Col>
         <Col md="3">
           <Row style={{ marginBottom: "2px" }}>
             <CardNoticias
-              description="Capacitacion al personal de la empresa Diésel Lange Sucursal Trenque Lauquen representantes de la marca John Deere"
-              src={dieselCurso}
-              height="199px"
+              description="Capacitación a Bomberos Voluntarios, personal de Salud de la Sala Garre, personal del Hogar de Ansianos y personal Policial de la localidad"
+              fecha="Noviembre, 2024"
+              src={img29}
             />
           </Row>
           <Row style={{ marginTop: "2px" }}>
@@ -168,6 +171,20 @@ const NDcapacitaciones = () => {
             description="Taller sobre Socorro Psicológico en Patagones con la activa participación del coordinador de defensa civil municipal"
             link="https://www.facebook.com/story.php?story_fbid=904579061713452&id=100064840984133&rdid=XD3hKt3GnDNASMr6"
             src={patagones}
+          />
+        </Col>
+        <Col md="3" style={{ padding: "0px" }}>
+          <CardNoticias
+            description="Curso de Primeros Socorros Psicológicos en Bomberos Voluntarios de Fortin Olavarria con la presencia de los integrantes del Cuerpo Activo"
+            fecha="Junio, 2023"
+            src={img27}
+          />
+        </Col>
+        <Col md="3" style={{ padding: "0px" }}>
+          <CardNoticias
+            description="Capacitacion al personal de la empresa Diésel Lange Sucursal Trenque Lauquen representantes de la marca John Deere"
+            src={dieselCurso}
+            height="199px"
           />
         </Col>
       </Row>

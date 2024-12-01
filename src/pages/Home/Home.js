@@ -8,12 +8,14 @@ import Testimonial from "../../Components/Testimonial/Testimonial";
 import { VerVideo } from "../../Components/VerVideo/VerVideo";
 import ModalPromoCurso from "../../Components/ModalPromoCurso/ModalPromoCurso";
 import { cursosInfo } from "../Fechas/Cursos";
+import ModalCursoEnCasa from "../../Components/ModalCursoEnCasa/ModalCursoEnCasa";
 
 const Home = () => {
   const hoy = new Date();
   const hayCursos = cursosInfo.some((e) => new Date(e.countdown) > hoy);
   return (
     <div>
+      <ModalCursoEnCasa />
       {hayCursos && <ModalPromoCurso />}
       <div className="home__containerSlider">
         <Slider />
