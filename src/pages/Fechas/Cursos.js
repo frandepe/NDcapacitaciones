@@ -1,6 +1,17 @@
 export const cursosInfo = [
   {
     certificado: true,
+    countdown: "2025-01-03T20:00:00",
+    descripcion: "Curso de socorrismo urbano RCP y DEA",
+    fecha: "3 de Enero 2025",
+    horario: "20:00",
+    id: "13",
+    localidad: "Fortín Olavarría",
+    lugar: "Fortín Olavarría",
+    titulo: "RCP y DEA",
+  },
+  {
+    certificado: true,
     countdown: "2024-12-07T09:00:00",
     descripcion:
       "Curso de socorrismo urbano RCP y DEA más Primeros auxilios Pediátricos",
